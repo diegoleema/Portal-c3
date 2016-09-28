@@ -1,0 +1,143 @@
+profile = UserProfile.create lattes: "http://lattes.cnpq.br/5677428057873087", degree: "Mestre", link: "", interests: "Probabilidade e Estatística", phone: "2119-4175", is_teacher: true
+user = User.create! name: 'Teste', enrollment: '123456789', password: '123123', role: User.roles[:admin], :password_confirmation => '123123', email: 'teste@teste.com', user_profile_id: profile.id
+
+
+Event.create title: 'Teste', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse accumsan, eros et egestas vestibulum, nibh nibh scelerisque leo, non aliquam nibh tellus nec orci. Fusce vulputate quis nunc nec blandit. Phasellus aliquam est ut ante eleifend semper. Nunc suscipit velit posuere mauris auctor, eget faucibus tortor viverra. Curabitur ornare finibus cursus. Nam at elit sed ipsum hendrerit imperdiet vel nec est. Donec mi ipsum, egestas ac augue ac, posuere consectetur lorem. Ut non leo in lectus placerat commodo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent in venenatis elit, eget malesuada lectus. Mauris sed aliquet turpis, ac fringilla eros. Curabitur non auctor velit. Nullam interdum neque ac imperdiet rutrum. ', date: DateTime.new, user_id: 1
+Article.create title: 'Teste', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse accumsan, eros et egestas vestibulum, nibh nibh scelerisque leo, non aliquam nibh tellus nec orci. Fusce vulputate quis nunc nec blandit. Phasellus aliquam est ut ante eleifend semper. Nunc suscipit velit posuere mauris auctor, eget faucibus tortor viverra. Curabitur ornare finibus cursus. Nam at elit sed ipsum hendrerit imperdiet vel nec est. Donec mi ipsum, egestas ac augue ac, posuere consectetur lorem. Ut non leo in lectus placerat commodo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent in venenatis elit, eget malesuada lectus. Mauris sed aliquet turpis, ac fringilla eros. Curabitur non auctor velit. Nullam interdum neque ac imperdiet rutrum. ', user_id: 1
+Oportunity.create title: 'Teste', employer: 'SUATI', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse accumsan, eros et egestas vestibulum, nibh nibh scelerisque leo, non aliquam nibh tellus nec orci. Fusce vulputate quis nunc nec blandit. Phasellus aliquam est ut ante eleifend semper. Nunc suscipit velit posuere mauris auctor, eget faucibus tortor viverra. Curabitur ornare finibus cursus. Nam at elit sed ipsum hendrerit imperdiet vel nec est. Donec mi ipsum, egestas ac augue ac, posuere consectetur lorem. Ut non leo in lectus placerat commodo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent in venenatis elit, eget malesuada lectus. Mauris sed aliquet turpis, ac fringilla eros. Curabitur non auctor velit. Nullam interdum neque ac imperdiet rutrum. ', user_id: 1
+
+Discipline.create semester: 1, name: "INTRODUCAO A PROGRAMACAO I", credit: 04, link: "http://www.unicap.br/pdf/ementa/INF11212014100000.pdf", code: "INF1121", hours: 60, shift: Discipline.shifts[:night]
+Discipline.create semester: 7, name: "COMPUTACAO GRAFICA", credit: 04, link: "http://www.unicap.br/pdf/ementa/INF17012008200000.pdf", code: "INF1701", hours: 60, shift: Discipline.shifts[:night]
+Discipline.create semester: 7, name: "ENGENHARIA DE SOFTWARE", credit: 04, link: "http://www.unicap.br/pdf/ementa/INF17202005200000.pdf", code: "INF1720", hours: 60, shift: Discipline.shifts[:night]
+Discipline.create semester: 8, name: "SISTEMAS MULTIMIDIA", credit: 04, link: "http://www.unicap.br/pdf/ementa/INF17152009100000.pdf", code: "INF1727", hours: 60, shift: Discipline.shifts[:night]
+Discipline.create semester: 5, name: "INFORMATICA E ADMINISTRACAO", credit: 04, link: "http://www.unicap.br/pdf/ementa/INF15022009100000.pdf", code: "INF1502", hours: 60, shift: Discipline.shifts[:night]
+Discipline.create semester: 5, name: "PARADIG DE LING DE PROGRAMACAO", credit: 4, link: "http://www.unicap.br/pdf/ementa/INF11252014100000.pdf", code: "INF1125", hours: 60, shift: Discipline.shifts[:night]
+Discipline.create semester: 5, name: "ARQ E ORG DE COMPUTADORES II", credit: 4, link: "http://www.unicap.br/pdf/ementa/INF14072009100000.pdf", code: "INF1407", hours: 60, shift: Discipline.shifts[:night]
+Discipline.create semester: 5, name: "LINGUAGENS FORMAIS", credit: 4, link: "http://www.unicap.br/pdf/ementa/INF11262013100000.pdf", code: "INF1126", hours: 60, shift: Discipline.shifts[:night]
+Discipline.create semester: 5, name: "GRAFOS", credit: 4, link: "http://www.unicap.br/pdf/ementa/EST17042014100000.pdf", code: "INF1407", hours: 60, shift: Discipline.shifts[:night]
+Discipline.create semester: 6, name: "COMPILADORES", credit: 4, link: "http://www.unicap.br/pdf/ementa/INF11272013100000.pdf", code: "INF1127", hours: 60, shift: Discipline.shifts[:night]
+Discipline.create semester: 6, name: "REDES DE COMPUTADORES I", credit: 4, link: "http://www.unicap.br/pdf/ementa/INF16162009100000.pdf", code: "INF1616", hours: 60, shift: Discipline.shifts[:night]
+Discipline.create semester: 6, name: "SISTEMAS DE INFORMACAO", credit: 4, link: "http://www.unicap.br/pdf/ementa/INF15062005200000.pdf", code: "INF1506", hours: 60, shift: Discipline.shifts[:night]
+Discipline.create semester: 6, name: "ANÁLISE DE ALGORITMOS", credit: 4, link: "http://www.unicap.br/pdf/ementa/INF12082005200000.pdf", code: "INF1701", hours: 60, shift: Discipline.shifts[:night]
+Discipline.create semester: 7, name: "SISTEMAS OPERACIONAIS I", credit: 4, link: "http://www.unicap.br/pdf/ementa/INF12182012200000.pdf", code: "INF1218", hours: 60, shift: Discipline.shifts[:night]
+Discipline.create semester: 7, name: "BANCO DE DADOS II", credit: 4, link: "http://www.unicap.br/pdf/ementa/INF12242013100000.pdf", code: "INF1224", hours: 60, shift: Discipline.shifts[:night]
+Discipline.create semester: 7, name: "REDES DE COMPUTADORES II", credit: 4, link: "http://www.unicap.br/pdf/ementa/INF16172009100000.pdf", code: "INF1617", hours: 60, shift: Discipline.shifts[:night]
+Discipline.create semester: 8, name: "SISTEMAS OPERACIONAIS II", credit: 4, link: "http://www.unicap.br/pdf/ementa/INF12192012200000.pdf", code: "INF1219", hours: 60, shift: Discipline.shifts[:night]
+Discipline.create semester: 7, name: "SISTEMAS MULTIMIDIA", credit: 4, link: "http://www.unicap.br/pdf/ementa/INF17152009100000.pdf", code: "INF1715", hours: 60, shift: Discipline.shifts[:noon]
+Discipline.create semester: 8, name: "SISTEMAS DISTRIBUIDOS", credit: 4, link: "http://www.unicap.br/pdf/ementa/INF16302005200000.pdf", code: "INF1630", hours: 60, shift: Discipline.shifts[:night]
+Discipline.create semester: 8, name: "ANALISE E PROJETO DE SISTEMAS", credit: 4, link: "http://www.unicap.br/pdf/ementa/INF15082005200000.pdf", code: "INF1508", hours: 60, shift: Discipline.shifts[:night]
+Discipline.create semester: 8, name: "ELETIVA DO CURSO DE QUATRO CR", credit: 4, link: nil, code: "ELC1040", hours: 60, shift: Discipline.shifts[:night]
+Discipline.create semester: 9, name: "ESTAGIO", credit: 16, link: "http://www.unicap.br/pdf/ementa/INF18072005200000.pdf", code: "INF1807", hours: 240, shift: Discipline.shifts[:night]
+Discipline.create semester: 9, name: "INFORMATICA E SOCIEDADE", credit: 4, link: "http://www.unicap.br/pdf/ementa/SOC12302007200000.pdf", code: "SOC1230", hours: 60, shift: Discipline.shifts[:night]
+Discipline.create semester: 9, name: "TRABALHO DE CONCLUSAO DE CURSO", credit: 4, link: "http://www.unicap.br/pdf/ementa/INF18082005200000.pdf", code: "INF1808", hours: 60, shift: Discipline.shifts[:night]
+Discipline.create semester: 1, name: "CALCULO DIF E INTEGRAL I", credit: 4, link: "http://www.unicap.br/pdf/ementa/MAT10092012100000.pdf", code: "MAT1009", hours: 60, shift: Discipline.shifts[:night]
+Discipline.create semester: 1, name: "PORTUGUES INSTRUMENTAL II", credit: 4, link: "http://www.unicap.br/pdf/ementa/LET10572012100000.pdf", code: "LET1057", hours: 60, shift: Discipline.shifts[:night]
+Discipline.create semester: 1, name: "LOGICA MATEMATICA", credit: 4, link: "http://www.unicap.br/pdf/ementa/INF12002007200000.pdf", code: "INF1200", hours: 60, shift: Discipline.shifts[:night]
+Discipline.create semester: 1, name: "INTROD A CIENCIA DA COMPUTACAO", credit: 4, link: "http://www.unicap.br/pdf/ementa/INF10282013100000.pdf", code: "INF1028", hours: 60, shift: Discipline.shifts[:night]
+Discipline.create semester: 2, name: "ELETRONICA BASICA", credit: 6, link: "http://www.unicap.br/pdf/ementa/FIS16072007100000.pdf", code: "FIS1607", hours: 90, shift: Discipline.shifts[:night]
+Discipline.create semester: 2, name: "CALCULO DIF E INTEGRAL II", credit: 4, link: "http://www.unicap.br/pdf/ementa/MAT10102012100000.pdf", code: "MAT1010", hours: 60, shift: Discipline.shifts[:night]
+Discipline.create semester: 2, name: "ALGEBRA LINEAR I", credit: 4, link: "http://www.unicap.br/pdf/ementa/MAT14212012100000.pdf", code: "MAT1421", hours: 60, shift: Discipline.shifts[:night]
+Discipline.create semester: 2, name: "INGLES APLICADO A INFORMATICA", credit: 4, link: "http://www.unicap.br/pdf/ementa/LET11632010100000.pdf", code: "LET1163", hours: 60, shift: Discipline.shifts[:night]
+Discipline.create semester: 2, name: "INTRODUCAO A PROGRAMACAO II", credit: 4, link: "http://www.unicap.br/pdf/ementa/INF11222014100000.pdf", code: "INF1122", hours: 60, shift: Discipline.shifts[:night]
+Discipline.create semester: 3, name: "ESTRUTURA DE DADOS I", credit: 4, link: "http://www.unicap.br/pdf/ementa/INF12092005200000.pdf", code: "INF1209", hours: 60, shift: Discipline.shifts[:night]
+Discipline.create semester: 3, name: "MATEMATICA DISCRETA", credit: 4, link: "http://www.unicap.br/pdf/ementa/INF12162013200000.pdf", code: "INF1216", hours: 60, shift: Discipline.shifts[:night]
+Discipline.create semester: 3, name: "ESTATISTICA E PROBABILIDADE", credit: 4, link: "http://www.unicap.br/pdf/ementa/EST14082013100000.pdf", code: "EST1408", hours: 60, shift: Discipline.shifts[:night]
+Discipline.create semester: 3, name: "HUMANISMO E CIDADANIA", credit: 4, link: "http://www.unicap.br/pdf/ementa/TEO19162009200000.pdf", code: "TEO1916", hours: 60, shift: Discipline.shifts[:night]
+Discipline.create semester: 3, name: "CIRCUITOS DIGITAIS", credit: 4, link: "http://www.unicap.br/pdf/ementa/INF14052013100000.pdf", code: "INF1405", hours: 60, shift: Discipline.shifts[:night]
+Discipline.create semester: 6, name: "BANCO DE DADOS I", credit: 4, link: "http://www.unicap.br/pdf/ementa/INF12232010100000.pdf", code: "INF1223", hours: 60, shift: Discipline.shifts[:night]
+Discipline.create semester: 4, name: "PROGRAMACAO ORIENTADA A OBJETO", credit: 4, link: "http://www.unicap.br/pdf/ementa/INF11232014100000.pdf", code: "INF1123", hours: 60, shift: Discipline.shifts[:night]
+Discipline.create semester: 4, name: "METODOS NUMERICOS", credit: 4, link: "http://www.unicap.br/pdf/ementa/INF10232014100000.pdf", code: "INF1023", hours: 60, shift: Discipline.shifts[:night]
+Discipline.create semester: 4, name: "PRATICA DE PROGRAMACAO", credit: 4, link: "http://www.unicap.br/pdf/ementa/INF11242014100000.pdf", code: "INF1124", hours: 60, shift: Discipline.shifts[:night]
+Discipline.create semester: 4, name: "ARQ E ORG DE COMPUTADORES I", credit: 4, link: "http://www.unicap.br/pdf/ementa/INF14062009100000.pdf", code: "INF1406", hours: 60, shift: Discipline.shifts[:night]
+Discipline.create semester: 4, name: "PROGRAMACAO ORIENTADA A OBJETO", credit: 4, link: "http://www.unicap.br/pdf/ementa/INF11232014100000.pdf", code: "INF1123", hours: 60, shift: Discipline.shifts[:noon]
+Discipline.create semester: 4, name: "ESTRUTURA DE DADOS II", credit: 4, link: "http://www.unicap.br/pdf/ementa/INF12172005200000.pdf", code: "INF1217", hours: 60, shift: Discipline.shifts[:night]
+Discipline.create semester: 4, name: "ARQ E ORG DE COMPUTADORES I", credit: 4, link: "http://www.unicap.br/pdf/ementa/INF14062009100000.pdf", code: "INF1406", hours: 60, shift: Discipline.shifts[:noon]
+Discipline.create semester: 4, name: "ESTRUTURA DE DADOS II", credit: 4, link: "http://www.unicap.br/pdf/ementa/INF12172005200000.pdf", code: "INF1217", hours: 60, shift: Discipline.shifts[:noon]
+Discipline.create semester: 4, name: "INFORMATICA E ADMINISTRACAO", credit: 4, link: "http://www.unicap.br/pdf/ementa/INF15022009100000.pdf", code: "INF1502", hours: 60, shift: Discipline.shifts[:noon]
+Discipline.create semester: 4, name: "PRATICA DE PROGRAMACAO", credit: 4, link: "http://www.unicap.br/pdf/ementa/INF11242014100000.pdf", code: "INF1124", hours: 60, shift: Discipline.shifts[:noon]
+Discipline.create semester: 1, name: "PORTUGUES INSTRUMENTAL II", credit: 4, link: "http://www.unicap.br/pdf/ementa/LET10572012100000.pdf", code: "LET1057", hours: 60, shift: Discipline.shifts[:noon]
+Discipline.create semester: 1, name: "CALCULO DIF E INTEGRAL I", credit: 4, link: "http://www.unicap.br/pdf/ementa/MAT10092012100000.pdf", code: "MAT1009", hours: 60, shift: Discipline.shifts[:noon]
+Discipline.create semester: 1, name: "FIL E CONHECIMEN TECNOLOGICO", credit: 4, link: "http://www.unicap.br/pdf/ementa/FIL14332009200000.pdf", code: "FIL1433", hours: 60, shift: Discipline.shifts[:noon]
+Discipline.create semester: 1, name: "INTROD A CIENCIA DA COMPUTACAO", credit: 4, link: "http://www.unicap.br/pdf/ementa/INF10282013100000.pdf", code: "INF1028", hours: 60, shift: Discipline.shifts[:noon]
+Discipline.create semester: 1, name: "LOGICA MATEMATICA", credit: 4, link: "http://www.unicap.br/pdf/ementa/INF12002007200000.pdf", code: "INF1200", hours: 60, shift: Discipline.shifts[:noon]
+Discipline.create semester: 1, name: "INTRODUCAO A PROGRAMACAO I", credit: 4, link: "http://www.unicap.br/pdf/ementa/INF11212014100000.pdf", code: "INF1121", hours: 60, shift: Discipline.shifts[:noon]
+Discipline.create semester: 2, name: "ELETRONICA BASICA", credit: 6, link: "http://www.unicap.br/pdf/ementa/FIS16072007100000.pdf", code: "FIS1607", hours: 90, shift: Discipline.shifts[:noon]
+Discipline.create semester: 2, name: "INGLES APLICADO A INFORMATICA", credit: 4, link: "http://www.unicap.br/pdf/ementa/LET11632010100000.pdf", code: "LET1163", hours: 60, shift: Discipline.shifts[:noon]
+Discipline.create semester: 2, name: "HUMANIDADE E TRANSCENDENCIA", credit: 4, link: "http://www.unicap.br/pdf/ementa/TEO19172014100000.pdf", code: "TEO1917", hours: 60, shift: Discipline.shifts[:noon]
+Discipline.create semester: 2, name: "INTRODUCAO A PROGRAMACAO II", credit: 4, link: "http://www.unicap.br/pdf/ementa/INF11222014100000.pdf", code: "INF1122", hours: 60, shift: Discipline.shifts[:noon]
+Discipline.create semester: 2, name: "CALCULO DIF E INTEGRAL II", credit: 4, link: "http://www.unicap.br/pdf/ementa/MAT10102012100000.pdf", code: "MAT1010", hours: 60, shift: Discipline.shifts[:noon]
+Discipline.create semester: 2, name: "ALGEBRA LINEAR I", credit: 4, link: "http://www.unicap.br/pdf/ementa/MAT14212012100000.pdf", code: "MAT1421", hours: 60, shift: Discipline.shifts[:noon]
+Discipline.create semester: 3, name: "ESTATISTICA E PROBABILIDADE", credit: 4, link: "http://www.unicap.br/pdf/ementa/EST14082013100000.pdf", code: "EST1408", hours: 60, shift: Discipline.shifts[:noon]
+Discipline.create semester: 3, name: "MATEMATICA DISCRETA", credit: 4, link: "http://www.unicap.br/pdf/ementa/INF12162013200000.pdf", code: "INF1216", hours: 60, shift: Discipline.shifts[:noon]
+Discipline.create semester: 3, name: "ESTRUTURA DE DADOS I", credit: 4, link: "http://www.unicap.br/pdf/ementa/INF12092005200000.pdf", code: "INF1209", hours: 60, shift: Discipline.shifts[:noon]
+Discipline.create semester: 3, name: "CIRCUITOS DIGITAIS", credit: 4, link: "http://www.unicap.br/pdf/ementa/INF14052013100000.pdf", code: "INF1405", hours: 60, shift: Discipline.shifts[:noon]
+Discipline.create semester: 3, name: "HUMANISMO E CIDADANIA", credit: 4, link: "http://www.unicap.br/pdf/ementa/TEO19162009200000.pdf", code: "TEO1916", hours: 60, shift: Discipline.shifts[:noon]
+Discipline.create semester: 3, name: "METODOS NUMERICOS", credit: 4, link: "http://www.unicap.br/pdf/ementa/INF10232014100000.pdf", code: "INF1023", hours: 60, shift: Discipline.shifts[:noon]
+Discipline.create semester: 4, name: "LINGUAGENS FORMAIS", credit: 4, link: "http://www.unicap.br/pdf/ementa/INF11262013100000.pdf", code: "INF1126", hours: 60, shift: Discipline.shifts[:noon]
+Discipline.create semester: 5, name: "PARADIG DE LING DE PROGRAMACAO", credit: 4, link: "http://www.unicap.br/pdf/ementa/INF11252014100000.pdf", code: "INF1125", hours: 60, shift: Discipline.shifts[:noon]
+Discipline.create semester: 5, name: "BANCO DE DADOS I", credit: 4, link: "http://www.unicap.br/pdf/ementa/INF12232010100000.pdf", code: "INF1223", hours: 60, shift: Discipline.shifts[:noon]
+Discipline.create semester: 5, name: "COMPILADORES", credit: 4, link: "http://www.unicap.br/pdf/ementa/INF11272013100000.pdf", code: "INF1127", hours: 60, shift: Discipline.shifts[:noon]
+Discipline.create semester: 5, name: "SISTEMAS DE INFORMACAO", credit: 4, link: "http://www.unicap.br/pdf/ementa/INF15062005200000.pdf", code: "INF1506", hours: 60, shift: Discipline.shifts[:noon]
+Discipline.create semester: 5, name: "ARQ E ORG DE COMPUTADORES II", credit: 4, link: "http://www.unicap.br/pdf/ementa/INF14072009100000.pdf", code: "INF1407", hours: 60, shift: Discipline.shifts[:noon]
+Discipline.create semester: 5, name: "GRAFOS", credit: 4, link: "http://www.unicap.br/pdf/ementa/EST17042014100000.pdf", code: "INF1407", hours: 60, shift: Discipline.shifts[:noon]
+Discipline.create semester: 6, name: "SISTEMAS OPERACIONAIS I", credit: 4, link: "http://www.unicap.br/pdf/ementa/INF12182012200000.pdf", code: "INF1218", hours: 60, shift: Discipline.shifts[:noon]
+Discipline.create semester: 6, name: "BANCO DE DADOS II", credit: 4, link: "http://www.unicap.br/pdf/ementa/INF12242013100000.pdf", code: "INF1224", hours: 60, shift: Discipline.shifts[:noon]
+Discipline.create semester: 6, name: "REDES DE COMPUTADORES I", credit: 4, link: "http://www.unicap.br/pdf/ementa/INF16162009100000.pdf", code: "INF1616", hours: 60, shift: Discipline.shifts[:noon]
+Discipline.create semester: 6, name: "ENGENHARIA DE SOFTWARE", credit: 4, link: "http://www.unicap.br/pdf/ementa/INF17202005200000.pdf", code: "INF1720", hours: 60, shift: Discipline.shifts[:noon]
+Discipline.create semester: 6, name: "COMPUTACAO GRAFICA", credit: 4, link: "http://www.unicap.br/pdf/ementa/INF17012008200000.pdf", code: "INF1701", hours: 60, shift: Discipline.shifts[:noon]
+Discipline.create semester: 6, name: "ANÁLISE DE ALGORITMOS", credit: 4, link: "http://www.unicap.br/pdf/ementa/INF12082005200000.pdf", code: "INF1701", hours: 60, shift: Discipline.shifts[:noon]
+Discipline.create semester: 7, name: "ELETIVA DO CURSO DE QUATRO CR", credit: 4, link: nil, code: "ELC1040", hours: 60, shift: Discipline.shifts[:noon]
+Discipline.create semester: 7, name: "SISTEMAS OPERACIONAIS II", credit: 4, link: "http://www.unicap.br/pdf/ementa/INF12192012200000.pdf", code: "INF1219", hours: 60, shift: Discipline.shifts[:noon]
+Discipline.create semester: 7, name: "ANALISE E PROJETO DE SISTEMAS", credit: 4, link: "http://www.unicap.br/pdf/ementa/INF15082005200000.pdf", code: "INF1508", hours: 60, shift: Discipline.shifts[:noon]
+Discipline.create semester: 7, name: "REDES DE COMPUTADORES II", credit: 4, link: "http://www.unicap.br/pdf/ementa/INF16172009100000.pdf", code: "INF1617", hours: 60, shift: Discipline.shifts[:noon]
+Discipline.create semester: 7, name: "INFORMATICA E SOCIEDADE", credit: 4, link: "http://www.unicap.br/pdf/ementa/SOC12302007200000.pdf", code: "SOC1230", hours: 60, shift: Discipline.shifts[:noon]
+Discipline.create semester: 8, name: "ELETIVA DO CURSO DE QUATRO CR", credit: 4, link: nil, code: "ELC1040", hours: 60, shift: Discipline.shifts[:noon]
+Discipline.create semester: 8, name: "SISTEMAS DISTRIBUIDOS", credit: 4, link: "http://www.unicap.br/pdf/ementa/INF16302005200000.pdf", code: "INF1630", hours: 60, shift: Discipline.shifts[:noon]
+Discipline.create semester: 8, name: "ELETIVA DO CURSO DE QUATRO CR", credit: 4, link: nil, code: "ELC1040", hours: 60, shift: Discipline.shifts[:noon]
+Discipline.create semester: 8, name: "TRABALHO DE CONCLUSAO DE CURSO", credit: 4, link: "http://www.unicap.br/pdf/ementa/INF18082005200000.pdf", code: "INF1808", hours: 60, shift: Discipline.shifts[:noon]
+Discipline.create semester: 8, name: "INTELIGENCIA ARTIFICIAL", credit: 4, link: "http://www.unicap.br/pdf/ementa/INF17162005200000.pdf", code: "INF1716", hours: 60, shift: Discipline.shifts[:noon]
+Discipline.create semester: 8, name: "ESTAGIO", credit: 16, link: "http://www.unicap.br/pdf/ementa/INF18072005200000.pdf", code: "INF1807", hours: 240, shift: Discipline.shifts[:noon]
+Discipline.create semester: 2, name: "HUMANIDADE E TRANSCENDENCIA", credit: 4, link: "http://www.unicap.br/pdf/ementa/TEO19172014100000.pdf", code: "TEO1917", hours: 60, shift: Discipline.shifts[:night]
+Discipline.create semester: 9, name: "ELETIVA DO CURSO DE QUATRO CR", credit: 4, link: nil, code: "ELC1040", hours: 60, shift: Discipline.shifts[:night]
+Discipline.create semester: 9, name: "ELETIVA DO CURSO DE QUATRO CR", credit: 4, link: nil, code: "ELC1040", hours: 60, shift: Discipline.shifts[:night]
+Discipline.create semester: 3, name: "CIRCUITOS DIGITAIS", credit: 4, link: "http://www.unicap.br/pdf/ementa/INF14052013100000.pdf", code: "INF1405", hours: 60, shift: Discipline.shifts[:noon]
+
+user.discipline_ids = [1,2,3,4,5,6,7,8,9,10]
+user.save!
+
+profile = UserProfile.create lattes: "null", degree: "", link: "", interests: "null", phone: "null", is_teacher: false
+teacher = User.create email: "giba@unicap.br", name: "Gilberto Pereira de Campos", enrollment: "442750", password: "123123", password_confirmation: "123123", user_profile_id: profile.id, role: User.roles[:admin]
+profile = UserProfile.create lattes: "http://lattes.cnpq.br/5131043311706098", degree: "Especialista", link: "www.c3.unicap.br/~almir/", interests: "Rede de Computadores", phone: "81-9-9976-3903", is_teacher: true
+teacher = User.create email: "almir.pires@gmail.com", name: "Almir Pires Ferreira Neto", enrollment: "342790", password: "123123", password_confirmation: "123123", user_profile_id: profile.id
+profile = UserProfile.create lattes: "http://lattes.cnpq.br/1684154610199074", degree: "Mestre", link: "", interests: "Linguagens de Programação", phone: "2119-4175", is_teacher: true
+teacher = User.create email: "aelm@unicap.br", name: "Ana Eliza Lopes Moura", enrollment: "406790", password: "123123", password_confirmation: "123123", user_profile_id: profile.id
+profile = UserProfile.create lattes: "http://lattes.cnpq.br/0292565364688015", degree: "Mestre", link: "", interests: "Dispositivos Móveis, Sistemas Embarcados", phone: "2119-4175", is_teacher: true
+teacher = User.create email: "antonio.cavalcanti@gmail.com", name: "Antônio Luiz de Oliveira Cavalcanti Júnior", enrollment: "494500", password: "123123", password_confirmation: "123123", user_profile_id: profile.id
+profile = UserProfile.create lattes: "http://lattes.cnpq.br/7465551031556094", degree: "Mestre", link: "", interests: "Redes de Computadores, Sistemas Distribuídos", phone: "2191-4006", is_teacher: true
+teacher = User.create email: "silvio@c3.unicap.br", name: "Silvio Soares Bandeira", enrollment: "384290", password: "123123", password_confirmation: "123123", user_profile_id: profile.id
+profile = UserProfile.create lattes: "http://lattes.cnpq.br/2635021175631237", degree: "Especialista", link: "", interests: "Redes de Computadores", phone: "2119-4175", is_teacher: true
+teacher = User.create email: "rubens@c3.unicap.br", name: "Antônio Rubens Lapa Coelho", enrollment: "376010", password: "123123", password_confirmation: "123123", user_profile_id: profile.id
+profile = UserProfile.create lattes: "http://lattes.cnpq.br/3970891727388929", degree: "Doutor", link: "", interests: "Engenharia de Software", phone: "2119-4006", is_teacher: true
+teacher = User.create email: "amsf@c3.unicap.br", name: "Antônio Mendes da Silva Filho", enrollment: "448470", password: "123123", password_confirmation: "123123", user_profile_id: profile.id
+profile = UserProfile.create lattes: "http://lattes.cnpq.br/1337583822386227", degree: "Doutora", link: "", interests: "Computação Bioinspirada, Biotecnologia", phone: "2119-4175", is_teacher: true
+teacher = User.create email: "cdaisy@unicap.br", name: "Clarissa Daisy da Costa Albuquerque", enrollment: "311600", password: "123123", password_confirmation: "123123", user_profile_id: profile.id
+profile = UserProfile.create lattes: "http://lattes.cnpq.br/3887722014128939", degree: "Doutor", link: "", interests: "Inteligência Computacional, Dispositivos Móveis", phone: "2119-4175", is_teacher: true
+teacher = User.create email: "agogear@gmail.com", name: "Eduardo Araújo Oliveira", enrollment: "470430", password: "123123", password_confirmation: "123123", user_profile_id: profile.id
+profile = UserProfile.create lattes: "http://lattes.cnpq.br/2589115552086641", degree: "Mestre", link: "", interests: "Probabilidade e Estatística", phone: "2119-4175", is_teacher: true
+teacher = User.create email: "fbertino@unicap.br", name: "Fernando José Bertino de Figueiredo", enrollment: "327840", password: "123123", password_confirmation: "123123", user_profile_id: profile.id
+profile = UserProfile.create lattes: "http://lattes.cnpq.br/0650141288927562", degree: "Doutor", link: "", interests: "Demografia da Educação", phone: "2119-4175", is_teacher: true
+teacher = User.create email: "eccampelo@uol.com.br", name: "Eduardo Carneiro Campelo Júnior", enrollment: "391400", password: "123123", password_confirmation: "123123", user_profile_id: profile.id
+profile = UserProfile.create lattes: "http://lattes.cnpq.br/1934903225521860", degree: "Doutor", link: "", interests: "Processamento de Sinais (voz e imagem), Inteligência Computacional, Tecnologias da Informação e da Comunicação Aplicadas às Ciências da Linguagem", phone: "2119-4006", is_teacher: true
+teacher = User.create email: "madeiro@c3.unicap.br", name: "Francisco Madeiro Bernardino Júnior", enrollment: "428890", password: "123123", password_confirmation: "123123", user_profile_id: profile.id
+profile = UserProfile.create lattes: "http://lattes.cnpq.br/1853704699093817", degree: "Mestre", link: "http://marciobueno.com", interests: "Realidade Virtual e Aumentada, Reconstrução 3D", phone: "2119-4240", is_teacher: true
+teacher = User.create email: "masb@unicap.br", name: "Márcio Augusto Silva Bueno", enrollment: "455770", password: "123123", password_confirmation: "123123", user_profile_id: profile.id
+profile = UserProfile.create lattes: "http://lattes.cnpq.br/0943480521170578", degree: "Especialista", link: "", interests: "Arquitetura de Sistemas de Computação, Linguagens de Programação", phone: "2191-4006", is_teacher: true
+teacher = User.create email: "mozart@unicap.br", name: "Mozart Gomes da Silva", enrollment: "302060", password: "123123", password_confirmation: "123123", user_profile_id: profile.id
+profile = UserProfile.create lattes: "http://lattes.cnpq.br/1781254939281428", degree: "Doutor", link: "http://www.sergiogaldino.pbworks.com", interests: "Cálculo Numérico, Probabilidade e Estatística", phone: "2119-4175", is_teacher: true
+teacher = User.create email: "galdino.sergio@gmail.com", name: "Sérgio Mário Lins Galdino", enrollment: "335110", password: "123123", password_confirmation: "123123", user_profile_id: profile.id
+profile = UserProfile.create lattes: "http://lattes.cnpq.br/8623118472645092", degree: "Doutor", link: "", interests: "Compressão de Vídeo, Processamento Digital de Imagens", phone: "2119-4006", is_teacher: true
+teacher = User.create email: "rcl@c3.unicap.br", name: "Robson Cavalcanti Lins", enrollment: "396500", password: "123123", password_confirmation: "123123", user_profile_id: profile.id
+profile = UserProfile.create lattes: "http://lattes.cnpq.br/4520293519781462", degree: "Doutor", link: "", interests: "Tolerância a Falhas, Sistemas Embarcados", phone: "2119-4006", is_teacher: true
+teacher = User.create email: "smmfast@gmail.com", name: "Sérgio Murilo Maciel Fernandes", enrollment: "399450", password: "123123", password_confirmation: "123123", user_profile_id: profile.id
+profile = UserProfile.create lattes: "http://lattes.cnpq.br/2561271245586035", degree: "Mestre", link: "", interests: "Sistemas de Informação, Engenharia de Software", phone: "2119-4175", is_teacher: true
+teacher = User.create email: "gilkabarbosa@yahoo.com.br", name: "Gilka Rocha Barbosa", enrollment: "335940", password: "123123", password_confirmation: "123123", user_profile_id: profile.id

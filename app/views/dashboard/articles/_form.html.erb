@@ -1,0 +1,66 @@
+<script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+<script>
+	tinymce.init({
+		selector:'textarea',
+		statusbar: false,
+		menubar: false,
+		min_height: 400,
+		plugins: 'link image code',
+		toolbar: [
+			'undo redo | styleselect | bold italic | link image',
+			'alignleft aligncenter alignright'
+		]
+	});
+
+</script>
+
+<div class="botao2">
+	<% if @dashboard_article.id.nil? or @dashboard_article.id == 0%>
+	<%= link_to 'Limpar', new_dashboard_article_path(), class: 'red', type: 'button' %>
+	<% else %>
+	<%= link_to button_tag('Remover', class: 'red'), {:controller => :articles,
+      :action => 'destroy', :id => @dashboard_article.id }, :method => :delete %>	
+	<% end %>
+	<a href="<%= dashboard_articles_path() %>"><button class="green">Voltar</button></a>
+</div>
+<%= form_for([:dashboard, @dashboard_article], :multipart => true) do |f| %>
+	<section class="content">
+		<section class="widget" style="min-height:300px">
+			<header>
+				<% if @dashboard_article.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@dashboard_article.errors.count, "error") %> prohibited this dashboard_article from being saved:</h2>
+
+            <ul>
+            <% @dashboard_article.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
+				<span class="icon">&#59160;</span>
+				<hgroup>
+					<h1>Notícia</h1>
+					<h2>Crie uma nova notícia</h2>
+				</hgroup>
+
+			</header>
+			<div class="content">
+				<div class="field-wrap">
+          <%= f.text_field :title %>
+				</div>
+
+				<div class="field-wrap">
+          <%= f.file_field :image %>
+				</div>
+
+				<div class="field-wrap wysiwyg-wrap">
+          <%= f.text_area :description %>
+				</div>
+				
+        <%= f.button 'Salvar Notícia', class: 'green', type: 'submit' %>
+			</div>
+		</section>
+	</section>
+</form>
+<% end %>

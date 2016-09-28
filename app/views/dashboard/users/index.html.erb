@@ -1,0 +1,43 @@
+<section class="content">
+    <section class="widget">
+        <header>
+            <span class="icon">&#59160;</span>
+            <hgroup>
+                <h1>Usuários</h1>
+            </hgroup>
+
+        </header>
+        <div class="content">
+            <table id="myTable" border="0" width="100">
+                <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Matrícula</th>
+                    <th>Email</th>
+                    <th>Opções</th>
+                </tr>
+                </thead>
+                <tbody>
+                <% @users.each do |user| %>
+                <tr>
+                    <td>
+                        <img src="<%= user.avatar.url%>" width="30" height="30"/>
+                        <%= link_to user.name,  edit_dashboard_user_path(user) %>
+                    </td>
+                    <td>
+                        <%= link_to user.enrollment,  edit_dashboard_user_path(user) %>
+                    </td>
+                    <td>
+                        <%= link_to user.email,  edit_dashboard_user_path(user) %>
+                    </td>
+                    <td>
+                        <%= link_to 'Remover', {:controller => :users,
+                        :action => 'destroy', :id => user.id }, :method => :delete %>
+                    </td>
+                </tr>
+                <% end %>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</section>

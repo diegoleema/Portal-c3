@@ -1,0 +1,71 @@
+<div class="botao2">
+  <% if not @class.new_record? %>
+      <%= link_to 'Remover', {:controller => :discipline_classes  ,
+                              :action => 'destroy', :id => @class.id }, :method => :delete %>
+  <% end %>
+  <a href="<%= dashboard_discipline_classes_path %>"><button class="green">Voltar</button></a>
+</div>
+<%= form_for([:dashboard, @class], :multipart => true) do |f| %>
+    <section class="content">
+      <section class="widget" style="min-height:00px">
+        <header>
+          <% if @class.errors.any? %>
+              <div id="error_explanation">
+                <h2><%= pluralize(@class.errors.count, "error") %>:</h2>
+
+                <ul>
+                  <% @class.errors.full_messages.each do |message| %>
+                      <li>
+                        <%= message %>
+                      </li>
+                  <% end %>
+                </ul>
+              </div>
+          <% end %>
+          <span class="icon">&#59160;</span>
+          <hgroup>
+            <h1>Turmas</h1>
+            <h2><%= @class.new_record? ? 'Inserir uma nova turma' : 'Modificar turma' %></h2>
+          </hgroup>
+        </header>
+        <div class="content">
+          <div class="field-wrap">
+            <label>Nome:</label>
+            <%= f.text_field :name, placeholder: 'Nome' %>
+          </div>
+
+          <div class="field-wrap">
+            <lavel>Disciplina:</lavel>
+            <%= f.select :discipline_id, current_user.disciplines.collect {|a| ["#{a.name} - #{a.night? ? 'Noite' : 'Tarde'}", a.id]} %>
+          </div>
+
+          <div class="field-wrap">
+            <lavel>Arquivos:</lavel>
+            <%= f.file_field :attachment_array, multiple:true %>
+          </div>
+          <% if @class.class_file_ids.size > 0 %>
+              <div class="file-wrap">
+                <label>Remover arquivos:</label>
+                <% @class.class_files.each do |attachment| %>
+                    <div class="file-wrap">
+                      <label><input name="destroy_files[]" type="checkbox" style="width: 1%;" value="<%= attachment.id %>"/> <%= attachment.original_filename %></label>
+                    </div>
+                <% end %>
+              </div>
+          <% end %>
+
+          <br>
+          <br>
+          <% if current_user.discipline_ids.length > 0 %>
+            <div id="botoess">
+              <%= f.button 'Salvar', class: 'green', type: 'submit' %>
+            </div>
+          <% else %>
+            <div id="botoess">
+              <label>Você precisa possuir mais de uma disciplina para continuar </label>  
+            </div>
+          <% end %>
+        </div>
+      </section>
+    </section>
+<% end %>

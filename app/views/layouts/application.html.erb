@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="../../../img/favicon.png" />
+    <title>PORTAL C3</title>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+        <%= csrf_meta_tags %>
+
+
+            <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,700,800" rel="stylesheet" type="text/css">
+
+            <link href="/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+            <link href="/assets/js/dropdown-menu/dropdown-menu.css" rel="stylesheet" type="text/css">
+
+            <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+            <link href="/assets/js/fancybox/jquery.fancybox.css" rel="stylesheet" type="text/css">
+
+            <link href="/assets/js/audioplayer/audioplayer.css" rel="stylesheet" type="text/css">
+
+            <link href="/assets/style.css" rel="stylesheet" type="text/css">
+
+            <link href="/assets/dist/css/lightbox.css" rel="stylesheet">
+
+</head>
+
+<body role="document">
+
+
+    <span class="visible-xs"></span><span class="visible-sm"></span><span class="visible-md"></span><span class="visible-lg"></span>
+
+
+    <div id="k-head">
+
+        <%= render :partial => "layouts/header.html.erb" %>
+    </div>
+
+
+    <div id="k-body">
+
+        <div class="container">
+            <div class="row no-gutter">
+              <p class="notice"><%= notice %></p>
+              <p class="alert"><%= alert %></p>
+              <%= yield %>              
+              <%= render :partial => 'layouts/sidebar.html.erb' %>
+            </div>
+        </div>
+    </div>
+
+    <%= render :partial => "layouts/footer.html.erb" %>
+
+        <div id="k-subfooter">
+            <%= render :partial => "layouts/sub_footer.html.erb" %>
+
+        </div>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+            <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+            <script src="/assets/js/dropdown-menu/dropdown-menu.js"></script>
+            <script src="/assets/js/fancybox/jquery.fancybox.pack.js"></script>
+            <script src="/assets/js/fancybox/jquery.fancybox-media.js"></script>
+            <script src="/assets/js/jquery.fitvids.js"></script>
+            <script src="/assets/js/audioplayer/audioplayer.min.js"></script>
+            <script src="/assets/js/jquery.easy-pie-chart.js"></script>
+            <script src="https://maps.googleapis.com/maps/api/js?sensor=true"></script>
+            <script src="/assets/js/theme.js"></script>
+            <script src="/assets/dist/js/lightbox-plus-jquery.js"></script>
+</body>
+
+</html>

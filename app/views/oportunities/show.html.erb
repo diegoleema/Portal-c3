@@ -1,0 +1,20 @@
+<div class="col-lg-8 col-md-8">
+    <div class="col-padded">
+        <div class="row gutter">
+            <div class="col-lg-12 col-md-12">
+                <h1 class="page-title"><%= @oportunity.title %></h1>
+                <span class="news-meta-date"><b>Publicação:</b> <%= @oportunity.created_at.strftime("%d/%m/%Y")%><p><b>Empresa:</b> <%= @oportunity.employer %></p></span>
+                <figure class="news-featured-image">
+                    <br><img src="<%= @oportunity.image.url %>" alt="<%= @oportunity.title %>" class="img-responsive">
+                </figure>
+                <div class="news-body">
+                    <p class="call-out">
+                        <p align="justify">
+                            <%= @oportunity.description.html_safe %>
+                        </p>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

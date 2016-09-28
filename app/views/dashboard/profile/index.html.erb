@@ -1,0 +1,81 @@
+<%= form_for(dashboard_profile_update_path, html: { multipart: true }) do |f| %>
+    <section class="content">
+      <section class="widget" style="min-height:300px">
+        <header>
+          <% if current_user.errors.any? %>
+              <div id="error_explanation">
+                <h2><%= pluralize(current_user.errors.count, "error") %> prohibited this dashboard_article from being saved:</h2>
+
+                <ul>
+                  <% current_user.errors.full_messages.each do |message| %>
+                      <li><%= message %></li>
+                  <% end %>
+                </ul>
+              </div>
+          <% end %>
+          <span class="icon">&#59160;</span>
+          <hgroup>
+            <h1 style= "line-height: 38px;" >Perfil <%= current_user.admin? ? 'Administrador' : 'Professor' %></h1>
+          </hgroup>
+
+        </header>
+        <div class="content">
+
+          <div class="field-wrap">
+            <p>
+              <img src="<%= current_user.avatar.url %>" width="128" height="128"/>
+            </p>
+            <label>Imagem de perfil:</label>
+            <%= file_field :user, :avatar %>
+          </div>
+
+          <div class="field-wrap">
+            <label>Nome:</label>
+            <%= text_field :user, :name, value: current_user.name %>
+          </div>
+
+          <div class="field-wrap">
+            <label>Titulação:</label>
+            <%= select :user_profile, :degree, options_for_select(['Mestre', 'Doutor', 'Especialista', 'Graduado', 'Técnico'], selected: current_user.profile.degree) %>
+          </div>
+
+          <div class="field-wrap">
+            <label>Cargo:</label>
+            <%= text_field :user_profile, :role, value: current_user.profile.role %>
+          </div>
+
+          <div class="field-wrap">
+            <label>Curriculum Lattes:</label>
+            <%= text_field :user_profile, :lattes, value: current_user.profile.lattes %>
+          </div>
+
+          <div class="field-wrap">
+            <label>Página pessoal:</label>
+            <%= text_field :user_profile, :link, value: current_user.profile.link %>
+          </div>
+
+          <div class="field-wrap">
+            <label>Email:</label>
+            <%= text_field :user, :email, value: current_user.email %>
+          </div>
+
+          <div class="field-wrap wysiwyg-wrap">
+            <label>Áreas de interesse:</label>
+            <%= text_area :user_profile, :interests, value: current_user.profile.interests %>
+          </div>
+
+          <div class="field-wrap wysiwyg-wrap">
+            <label>Nova senha (opcional):</label>
+            <%= password_field :user, :password, value: current_user.password %>
+          </div>
+
+          <div class="field-wrap wysiwyg-wrap">
+            <label>Confirmação de senha (opcional):</label>
+            <%= password_field :user, :password_confirmation, value: current_user.password_confirmation %>
+          </div>
+
+          <%= f.button 'Atualizar perfil', class: 'green', type: 'submit' %>
+        </div>
+      </section>
+    </section>
+<% end %>

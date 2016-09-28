@@ -1,0 +1,83 @@
+<div class="container">
+
+    <!-- row -->
+
+    <div class="row">
+        <!-- row -->
+
+        <nav class="k-functional-navig">
+            <!-- functional navig -->
+            <ul class="list-inline pull-right">
+              <li>
+                <% if user_signed_in? %>
+                  <li>
+                    <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+                  </li>
+                  <li>
+                    <%= link_to('Gerenciador', dashboard_articles_path) %>
+                  </li>
+                <% else %>
+                  <li>
+                    <%= link_to('Login', new_user_session_path) %>
+                  </li>
+                <% end %>
+              </li>
+
+            </ul>
+        </nav>
+        <!-- functional navig end -->
+
+        <div class="col-lg-12">
+
+            <div id="k-site-logo" class="pull-left">
+                <!-- site logo -->
+
+                <h1 class="k-logo">
+                    <a href="<%= home_path %>" title="Inicial">
+                        <img src="/assets/img/site-logo.png" alt="Site Logo" width="120" class="img-responsive" />
+                    </a>
+                </h1>
+
+
+                <a id="mobile-nav-switch" href="#drop-down-left"><span class="alter-menu-icon"></span></a>
+                <!-- alternative menu button -->
+
+            </div>
+            <!-- site logo end -->
+
+
+
+
+
+            <nav id="k-menu" class="k-main-navig">
+                <!-- main navig -->
+
+                <ul id="drop-down-left" class="k-dropdown-menu">
+                    <li>
+                        <%= link_to 'Notícias', articles_path(), class: (controller_name=='articles'?'active':'') %>
+                    </li>
+                    <li>
+                        <%= link_to 'Eventos', events_path(), class: (controller_name=='events'?'active':'') %>
+                    </li>
+                    <li>
+                        <%= link_to 'Oportunidades', oportunities_path(), class: (controller_name=='oportunities'?'active':'') %>
+                    </li>
+
+                    <li>
+                        <%= link_to 'Disciplinas', disciplines_path(), class: (controller_name=='discipline'?'active':'') %>
+                    </li>
+                    <li>
+                      <%= link_to 'Professores', teachers_path(), class: (controller_name=='teachers'?'active':'') %>
+                    </li>
+                    <li>
+                        <%= link_to 'Sobre', about_path(), class: (action_name=='about'?'active':'') %>
+                    </li>
+                </ul>
+
+            </nav>
+            <!-- main navig end -->
+        </div>
+    </div>
+    <!-- row end -->
+</div>
+<!-- container end -->

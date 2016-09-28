@@ -1,0 +1,38 @@
+<div class="col-lg-8 col-md-8">
+    <div class="col-padded">
+        <div class="row gutter">
+            <div class="col-lg-12 col-md-12">
+                <h1 class="page-title">Eventos</h1>
+            </div>
+        </div>
+        <div class="row gutter">
+            <div class="col-lg-12 col-md-12">
+                <% @events.each do |event| %>
+                <div class="news-mini-wrap col-lg-6 col-md-6">
+                    <div class="page-title-meta">
+                        <h1 class="title-median"><%= link_to event.title, event_path(event)%></h1>
+                        <div class="up-event-meta clearfix">
+                            <div class="up-event-date">
+                                <%= event.date.strftime("%d/%m/%Y")%>
+                            </div>
+                            <div class="up-event-time">
+                                <%= event.date.strftime("%H:%M")%>
+                            </div>
+                        </div>
+                        <div class="news-summary">
+                            <p>
+                                <%= sanitize event.description[0..20]%>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <% end %>
+            </div>
+        </div>
+        <div class="row gutter">
+            <div class="col-lg-12">
+                <%= will_paginate @events, :previous_label => 'Anterior', :next_label => 'Próximo' %>
+            </div>
+        </div>
+    </div>
+</div>

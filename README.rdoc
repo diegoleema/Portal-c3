@@ -1,0 +1,29 @@
+== README
+
+Requisitos do sistema:
+* Linux
+* Ruby 2.3
+* Rails 4.1
+* PostgreSQL 4.9 (Serviço executando)
+* Node.JS para compressão de arquivos JavaScript
+* Nginx para proxy reverso
+* *ImageMagick* para manipulação de imagens
+
+Possível futuro requisito:
+* Docker
+
+Requisitos de desenvolvimento:
+* Linux com *ImageMagick*
+* Ruby 2.3
+* Rails 4.1
+* Ruby Gems
+* PostgreSQL 4.9 (Serviço executando)
+* Node.JS para compressão de arquivos JavaScript
+
+== Senhas importantes
+* sm@sm.(dei|c3).unicap.br
+** sm_server
+* root@sm.(dei|c3).unicap.br
+** sm_server
+* postgres@postgres
+** 123456

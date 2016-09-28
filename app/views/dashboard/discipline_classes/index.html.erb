@@ -1,0 +1,58 @@
+<section class="content">
+  <section class="widget">
+    <header>
+      <span class="icon">&#59160;</span>
+      <hgroup>
+        <h1>Turmas</h1>
+        <h2>Turmas cadastradas</h2>
+      </hgroup>
+
+    </header>
+    <div class="content">
+      <div class="row gutter">
+        <div class="col-lg-12">
+          <div class="portal_pagination">
+            <%= will_paginate @classes, :previous_label => 'Anterior', :next_label => 'Próximo'%>
+          </div>
+        </div>
+      </div>
+      <table id="myTable" border="0" width="100">
+        <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Disciplina</th>
+          <th>Criação</th>
+          <% if current_user.admin? %>
+              <th>Professor</th>
+          <% end %>
+          <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <% @classes.each do |klass| %>
+            <tr>
+              <td>
+                <%= link_to klass.name,  edit_dashboard_discipline_class_path(klass) %>
+              </td>
+              <td>
+                <%= link_to "#{klass.discipline.name} - #{klass.discipline.night? ? 'Noite' : 'Tarde'}",  edit_dashboard_discipline_path(klass.discipline) %>
+              </td>
+              <td>
+                <%= link_to klass.created_at,  edit_dashboard_discipline_class_path(klass) %>
+              </td>
+              <% if current_user.admin? %>
+                  <td>
+                    <%= link_to klass.user_id == current_user.id ? 'Você' : klass.user.name,  edit_dashboard_discipline_class_path(klass) %>
+                  </td>
+              <% end %>
+              <td>
+                <%= link_to 'Remover', {:controller => :discipline_classes,
+                                        :action => 'destroy', :id => klass.id }, :method => :delete %>
+              </td>
+            </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</section>

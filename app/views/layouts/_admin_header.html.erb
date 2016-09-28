@@ -1,0 +1,18 @@
+<div class="testing">
+    <header class="main">
+        <h1><strong>Gerenciador</strong> de Conte&uacutedo</h1>
+    </header>
+    <section class="user">
+        <div class="profile-img">
+            <a href="/dashboard" title="Perfil"></a>
+            <p><img src="<%= current_user.avatar.url %>" alt="" height="40" width="40" /> Seja bem-vindo,
+                <%= current_user.name %>
+            </p>
+        </div>
+        <div class="buttons">
+            <button class="ico-font">&#59157;</button><a href="<%= dashboard_profile_path %>"><span class="button">Editar Perfil</span></a>
+            <button class="ico-font">&#59157;</button><a href="./.."><span class="button">Portal</span></a>
+            <button class="button blue"><%= link_to('SAIR', destroy_user_session_path, :method => :delete) %></button>
+        </div>
+    </section>
+</div>

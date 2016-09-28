@@ -1,0 +1,20 @@
+<div class="col-lg-8 col-md-8">
+    <div class="col-padded">
+        <div class="row gutter">
+            <div class="col-lg-12 col-md-12">
+                <h1 class="page-title"><%= @event.title %></h1>
+                <span class="news-meta-date"><b>Data do evento:</b> <%= @event.date.strftime("%d/%m/%Y")%> às <%= @event.date.strftime("%H:%M")%><p><b>Local:</b> <%= @event.place %></p></span>
+                <figure class="news-featured-image">
+                    <br><img src="<%= @event.image.url %>" alt="<%= @event.title %>" class="img-responsive">
+                </figure>
+                <div class="news-body">
+                    <p class="call-out">
+                        <p align="justify">
+                            <%= @event.description.html_safe %>
+                        </p>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,73 @@
+<div class="botao2">
+    <% if not @dashboard_discipline.new_record? %>
+      <%= link_to 'Remover', {:controller => :disciplines  ,
+                              :action => 'destroy', :id => @dashboard_discipline.id }, :method => :delete %>
+    <% end %>
+    <a href="<%= dashboard_disciplines_path %>"><button class="green">Voltar</button></a>
+</div>
+<%= form_for([:dashboard, @dashboard_discipline]) do |f| %>
+    <section class="content">
+        <section class="widget" style="min-height:00px">
+            <header>
+                <% if @dashboard_discipline.errors.any? %>
+                    <div id="error_explanation">
+                        <h2><%= pluralize(@dashboard_discipline.errors.count, "error") %> prohibited this dashboard_discipline from being saved:</h2>
+
+                        <ul>
+                            <% @dashboard_discipline.errors.full_messages.each do |message| %>
+                                <li>
+                                    <%= message %>
+                                </li>
+                                <% end %>
+                        </ul>
+                    </div>
+                    <% end %>
+                        <span class="icon">&#59160;</span>
+                        <hgroup>
+                            <h1>Disciplinas</h1>
+                            <h2><%= @dashboard_discipline.new_record? ? 'Inserir uma nova disciplina' : 'Modificar disciplina' %></h2>
+                        </hgroup>
+            </header>
+            <div class="content">
+                <div class="field-wrap">
+                    <%= f.text_field :code, placeholder: 'Código da Ementa' %>
+                </div>
+                <div class="field-wrap">
+                    <%= f.text_field :name, placeholder: 'Nome' %>
+                </div>
+                <div class="field-wrap">
+                    <%= f.number_field :credit, placeholder: 'Créditos' %>
+                </div>
+                <div class="field-wrap">                  
+                    <%= f.number_field :hours, placeholder: 'Carga horária' %>
+                </div>
+                <div class="field-wrap">                    
+                    <%= f.number_field :semester, placeholder: 'Período' %>
+                </div>
+                <div class="field-wrap">
+                    <input type="text" name="disciplinaTurno" placeholder="Turno" />
+                </div>
+                <div class="field-wrap">                    
+                    <%= f.text_field :link, placeholder: 'Link do Plano Acadêmico' %>
+                </div>
+
+              <div class="field-wrap">
+                <label>Professores (Segure <b>ctrl</b> para selecionar mais de um ou modificar a lista atual):</label>
+                <div class="field-wrap">
+                  <div style="overflow: auto; height: 100px; border-style: solid;border-width: 1px;">
+                    <% User.all.each do |user| %>
+                        <div class="file-wrap">
+                          <label><%= check_box_tag 'discipline[user_ids][]', user.id, @dashboard_discipline.user_ids.include?(user.id), {:style => 'width: 1%;'} %> <%= user.name %></label>
+                        </div>
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+
+                <div id="botoess">
+                  <%= f.button 'Salvar', class: 'green', type: 'submit' %>
+                </div>
+            </div>
+        </section>
+    </section>
+    <% end %>

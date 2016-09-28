@@ -1,0 +1,91 @@
+<%= form_for([:dashboard, @user], html: { multipart: true }) do |f| %>
+    <section class="content">
+      <section class="widget" style="min-height:300px">
+        <header>
+          <% if @user.errors.any? %>
+              <div id="error_explanation">
+                <h2><%= pluralize(@user.errors.count, "error") %> prohibited this dashboard_article from being saved:</h2>
+
+                <ul>
+                  <% @user.errors.full_messages.each do |message| %>
+                      <li><%= message %></li>
+                  <% end %>
+                </ul>
+              </div>
+          <% end %>
+          <span class="icon">&#59160;</span>
+          <hgroup>
+            <h1 style= "line-height: 38px;" >Usuário</h1>
+          </hgroup>
+
+        </header>
+        <div class="content">
+
+          <div class="field-wrap">
+            <p>
+              <img src="<%= @user.avatar.url %>" width="128" height="128"/>
+            </p>
+            <label>Imagem de perfil:</label>
+            <%= file_field :user, :avatar %>
+          </div>
+
+          <div class="field-wrap">
+            <label>Nome:</label>
+            <%= text_field :user, :name, value: @user.name %>
+          </div>
+
+          <div class="field-wrap">
+            <label>Titulação:</label>
+            <%= select :user_profile, :degree, options_for_select(['Mestre', 'Doutor', 'Especialista', 'Graduado', 'Técnico'], selected: @user.profile.degree) %>
+          </div>
+
+          <div class="field-wrap">
+            <label>Cargo:</label>
+            <%= text_field :user_profile, :role, value: @user.profile.role %>
+          </div>
+
+          <div class="field-wrap">
+            <label>Curriculum Lattes:</label>
+            <%= text_field :user_profile, :lattes, value: @user.profile.lattes %>
+          </div>
+
+          <div class="field-wrap">
+            <label>Página pessoal:</label>
+            <%= text_field :user_profile, :link, value: @user.profile.link %>
+          </div>
+
+          <div class="field-wrap">
+            <label>Email:</label>
+            <%= text_field :user, :email, value: @user.email %>
+          </div>
+
+          <div class="field-wrap wysiwyg-wrap">
+            <label>Áreas de interesse:</label>
+            <%= text_area :user_profile, :interests, value: @user.profile.interests %>
+          </div>
+
+          <div class="field-wrap wysiwyg-wrap">
+            <label>É administrador:</label>
+            <%= select :user, :role, options_for_select(User.roles.keys.to_a, selected: @user.role.nil? ? :user : @user.role) %>
+          </div>
+
+          <div class="field-wrap wysiwyg-wrap">
+            <label>É professor (Caso sim, aparecerá no portal):</label>
+            <%= select :user_profile, :is_teacher, options_for_select([['Sim','1'], ['Não','0']], selected: @user.user_profile.is_teacher ? '1' : '0') %>
+          </div>
+
+          <div class="field-wrap wysiwyg-wrap">
+            <label>Nova senha:</label>
+            <%= password_field :user, :password, value: @user.password %>
+          </div>
+
+          <div class="field-wrap wysiwyg-wrap">
+            <label>Confirmação de senha:</label>
+            <%= password_field :user, :password_confirmation, value: @user.password_confirmation %>
+          </div>
+
+          <%= f.button 'Salvar', class: 'green', type: 'submit' %>
+        </div>
+      </section>
+    </section>
+<% end %>

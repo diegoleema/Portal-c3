@@ -1,0 +1,54 @@
+<section class="content">
+  <section class="widget">
+    <header>
+      <span class="icon">&#59160;</span>
+      <hgroup>
+        <h1>Eventos</h1>
+        <h2>Eventos recentes</h2>
+      </hgroup>
+
+    </header>
+    <div class="content">
+      <div class="row gutter">
+        <div class="col-lg-12">
+          <div class="portal_pagination">
+            <%= will_paginate @events, :previous_label => 'Anterior', :next_label => 'Próximo'%>
+          </div>
+        </div>
+      </div>
+      <table id="myTable" border="0" width="100">
+        <thead>
+        <tr>
+          <th>Titulo</th>
+          <th>Data</th>
+          <% if current_user.admin? %>
+              <th>Autor</th>
+          <% end %>
+          <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <% @events.each do |article| %>
+            <tr>
+              <td>
+                <%= link_to article.title,  edit_dashboard_event_path(article) %>
+              </td>
+              <td>
+                <%= link_to article.created_at,  edit_dashboard_event_path(article) %>
+              </td>
+              <% if current_user.admin? %>
+                  <td>
+                    <%= link_to article.user_id == current_user.id ? 'Você' : article.user.name,  edit_dashboard_event_path(article) %>
+                  </td>
+              <% end %>
+              <td>
+                <%= link_to 'Remover', {:controller => :events,
+                                        :action => 'destroy', :id => article.id }, :method => :delete %>
+              </td>
+            </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</section>

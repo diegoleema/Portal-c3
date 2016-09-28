@@ -1,0 +1,72 @@
+<script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+<script>
+  tinymce.init({
+    selector:'textarea',
+    statusbar: false,
+    menubar: false,
+    min_height: 400,
+    plugins: 'link image code',
+    toolbar: [
+      'undo redo | styleselect | bold italic | link image',
+      'alignleft aligncenter alignright'
+    ]
+  });
+
+</script>
+
+<div class="botao2">
+  <% if @oportunity.id.nil? or @oportunity.id == 0%>
+      <%= link_to 'Limpar', new_dashboard_oportunity_path(), class: 'red', type: 'button' %>
+  <% else %>
+      <%= link_to button_tag('Remover', class: 'red'), {:controller => :oportunities,
+                                                        :action => 'destroy', :id => @oportunity.id }, :method => :delete %>
+  <% end %>
+  <a href="<%= dashboard_oportunities_path() %>"><button class="green">Voltar</button></a>
+</div>
+<%= form_for([:dashboard, @oportunity], :multipart => true) do |f| %>
+    <section class="content">
+      <section class="widget" style="min-height:300px">
+        <header>
+          <% if @oportunity.errors.any? %>
+              <div id="error_explanation">
+                <h2><%= pluralize(@oportunity.errors.count, "erro") %> impediram o salvamento da oportunidade:</h2>
+
+                <ul>
+                  <% @oportunity.errors.full_messages.each do |message| %>
+                      <li><%= message %></li>
+                  <% end %>
+                </ul>
+              </div>
+          <% end %>
+          <span class="icon">&#59160;</span>
+          <hgroup>
+            <h1>Oportunidade</h1>
+          </hgroup>
+
+        </header>
+        <div class="content">
+          <div class="field-wrap">
+            <label>Título:</label>
+            <%= f.text_field :title %>
+          </div>
+
+          <div class="field-wrap">
+            <label>Imagem da empresa:</label>
+            <%= f.file_field :image %>
+          </div>
+
+          <div class="field-wrap">
+            <label>Empresa:</label>
+            <%= f.text_field :employer %>
+          </div>
+
+          <div class="field-wrap wysiwyg-wrap">
+            <%= f.text_area :description %>
+          </div>
+
+          <%= f.button 'Salvar', class: 'green', type: 'submit' %>
+        </div>
+      </section>
+    </section>
+    </form>
+<% end %>

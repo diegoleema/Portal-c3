@@ -1,0 +1,38 @@
+<div class="col-lg-8 col-md-8">
+    <div class="col-padded">
+        <div class="row gutter">
+            <div class="col-lg-12 col-md-12">
+                <h1 class="page-title">Notícias</h1>
+                <div class="category-description">
+                </div>
+            </div>
+        </div>
+        <div class="row gutter k-equal-height">
+            <% @articles.each do |article| %>
+            <div class="news-mini-wrap col-lg-6 col-md-6">
+                <figure class="news-featured-image">
+                    <a href="<%= article_path(article) %>" title="<%= article.title%>">
+                        <img src="<%= article.image.url %>" class="attachment-thumbnail wp-post-image" height="320" width="340" />
+                    </a>
+                </figure>
+                <div class="page-title-meta">
+                    <h1 class="page-title"><a href="<%= article_path(article) %>" title="<%= article.title%>"><%= article.title%></a></h1>
+                    <div class="news-meta">
+                        <span class="news-meta-date"><%= article.created_at.strftime("%H:%M")%></span>
+                    </div>
+                </div>
+            <div class="news-summary">
+                <p>
+                    <%= sanitize article.description[0..30]%>
+                </p>
+            </div>
+        </div>
+        <% end %>
+    </div>
+    <div class="row gutter">
+        <div class="col-lg-12">
+            <%= will_paginate @articles, :previous_label => 'Anterior', :next_label => 'Próximo' %>
+        </div>
+    </div>
+</div>
+</div>

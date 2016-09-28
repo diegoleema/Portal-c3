@@ -1,0 +1,65 @@
+<div class="col-lg-4 col-md-4">
+    <div class="col-padded col-shaded">
+        <% if not @latest_events.nil? and not @latest_events.empty? %>
+            <ul class="list-unstyled clear-margins">
+                <li class="widget-container widget_up_events">
+                    <h1 class="title-widget">Próximos Eventos</h1>
+                    <ul class="list-unstyled">
+                        <% @latest_events.each do |event| %>
+                            <li class="up-event-wrap">
+                                <h1 class="title-median"><%= link_to event.title, event_path(event) %></h1>
+                                <div class="up-event-meta clearfix">
+                                    <div class="up-event-date">
+                                        <%= event.date.strftime("%d/%m/%Y")%>
+                                    </div>
+                                    <div class="up-event-time">
+                                        <%= event.date.strftime("%H:%M")%>
+                                    </div>
+                                </div>
+                                <p>
+                                    <%= sanitize(event.description[0..30]) %>
+                                    <p><%= link_to 'Mais', event_path(event), class: 'moretag' %></p>
+                                </p>
+                            </li>
+                            <% end %>
+                    </ul>
+                </li>
+            </ul>
+            <% end %>
+    </div>
+</div>
+<div class="col-lg-4 col-md-4">
+    <% if not @latest_articles.nil? and not @latest_articles.empty? %>
+        <div class="col-padded">
+            <ul class="list-unstyled clear-margins">
+                <li class="widget-container widget_recent_news">
+                    <h1 class="title-widget">Últimas Notícias</h1>
+                    <ul class="list-unstyled">
+                        <% @latest_articles.each do |article| %>
+                            <li class="recent-news-wrap">
+                                <h1 class="title-median"><%= link_to article.title, article_path(article)%></h1>
+                                <div class="recent-news-meta">
+                                    <div class="recent-news-date">
+                                        <%= article.updated_at.strftime("%d/%m/%Y")%>
+                                    </div>
+                                </div>
+                                <div class="recent-news-content clearfix">
+                                    <figure class="recent-news-thumb">
+                                        <a href="<%= article_path(article)%>" title="<%= article.title%>">
+                                            <%= image_tag article.image.url, class: 'attachment-thumbnail wp-post-image' %>
+                                        </a>
+                                    </figure>
+                                    <div class="recent-news-text">
+                                        <p>
+                                            <%= sanitize(article.description[0..20])%>
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <% end %>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <% end %>
+</div>

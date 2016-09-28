@@ -1,0 +1,58 @@
+<section class="content">
+  <section class="widget">
+    <header>
+      <span class="icon">&#59160;</span>
+      <hgroup>
+        <h1>Oportunidades</h1>
+        <h2>Oportunidades recentes</h2>
+      </hgroup>
+
+    </header>
+    <div class="content">
+      <div class="row gutter">
+        <div class="col-lg-12">
+          <div class="portal_pagination">
+            <%= will_paginate @oportunities, :previous_label => 'Anterior', :next_label => 'Próximo'%>
+          </div>
+        </div>
+      </div>
+      <table id="myTable" border="0" width="100">
+        <thead>
+        <tr>
+          <th>Titulo</th>
+          <th>Empresa</th>
+          <th>Data</th>
+          <% if current_user.admin? %>
+              <th>Autor</th>
+          <% end %>
+          <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <% @oportunities.each do |oportunity| %>
+            <tr>
+              <td>
+                <%= link_to oportunity.title,  edit_dashboard_oportunity_path(oportunity) %>
+              </td>
+              <td>
+                <%= link_to oportunity.employer,  edit_dashboard_oportunity_path(oportunity) %>
+              </td>
+              <td>
+                <%= link_to oportunity.created_at.strftime("%d/%m/%Y"),  edit_dashboard_oportunity_path(oportunity) %>
+              </td>
+              <% if current_user.admin? %>
+                  <td>
+                    <%= link_to oportunity.user_id == current_user.id ? 'Você' : oportunity.user.name,  edit_dashboard_oportunity_path(oportunity) %>
+                  </td>
+              <% end %>
+              <td>
+                <%= link_to 'Remover', {:controller => :oportunities  ,
+                                        :action => 'destroy', :id => oportunity.id }, :method => :delete %>
+              </td>
+            </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</section>

@@ -1,0 +1,74 @@
+<div class="col-lg-8 col-md-8">
+  <div class="col-padded">
+    <div class="row gutter">
+      <div class="col-lg-12 col-md-12">
+        <div class="course-title-meta clearfix">
+          <h1 class="page-title" style="text-transform:uppercase"><%= @teacher.name %></h1>
+          <dl class="dl-horizontal course-meta">
+            <img src="<%=@teacher.avatar.url %>" alt="<%= @teacher.name %>" width="150" height="150" />
+            <dt>Cargo: </dt>
+            <dd>
+              <%= @teacher.profile.role.nil? ? 'Professor' : @teacher.profile.role %>
+            </dd>
+            <dt>Titulação:</dt>
+            <dd>
+              <%= @teacher.profile.degree %>
+            </dd>
+            <dt>Currículo Lattes:</dt>
+            <dd>
+              <a href="<%= @teacher.profile.lattes %>" target="_blank">Clique Aqui</a>
+            </dd>
+
+          </dl>
+        </div>
+        <div class="news-body clearfix">
+          <dt>Areas de Interesse:</dt>
+          <p align="justify">
+            <%= @teacher.profile.interests %>
+          </p>
+          <dt><font size=2.8>E-mail:</font></dt>
+          <dd>
+            <%= @teacher.email %>
+            </font>
+          </dd>
+          <dt><font size=2.8>Fone:</dt>
+          <dd>
+            <%= @teacher.profile.phone %>
+            </font>
+          </dd>
+          <% unless @teacher.profile.link.empty? %>
+              <dt><font size=2.8>Página Pessoal:</font></dt>
+              <dd><a href="<%= @teacher.profile.link %>" target="_blank"><%= @teacher.profile.link %></a></font>
+              </dd>
+          <% end %>
+          <% if not @teacher.discipline_ids.nil? and @teacher.discipline_ids.size > 0 %>
+              <h6>Material de aula:</h6>
+              <% @teacher.disciplines.each do |discipline| %>
+              <br/>
+              <p onclick="$('.classes').hide(); $('.classes[data-discipline-id=<%=discipline.id%>]').show();"><font size='2.5'><%= discipline.code %> - <%= discipline.name %></font></p>
+              <ul class="list-unstyled classes list-downloads" data-discipline-id="<%= discipline.id %>" style="display: none;">
+                <li>
+                  <% @teacher.classes.where(discipline_id: discipline.id).each do |classe| %>
+                    <p onclick="$('.class').hide(); $('.class[data-class-id=<%=classe.id%>]').show();"><%= classe.name %></p>
+                    <ul class="list-unstyled class list-downloads" data-class-id="<%= classe.id %>" style="display: none;">
+                      <% classe.attachments.each do |attachment| %>
+                        <li>
+                          <i class="fa fa-cloud-download"></i>
+                          <a href="<%= attachment.url%>" target="_blank" title="<%= attachment.original_filename %>" class="download-link">
+                            <span class="dwnld-title"></span>
+                            <span class="help-block"><%= attachment.original_filename %></span>
+                          </a>
+                        </li>
+                      <% end %>
+                    </ul>
+                  <% end %>
+                </li>
+              </ul>
+              <% end %>
+          <% end %>
+          <hr/>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

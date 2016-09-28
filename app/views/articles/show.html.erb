@@ -1,0 +1,22 @@
+<div class="col-lg-8 col-md-8">
+    <div class="col-padded">
+        <div class="row gutter">
+            <div class="col-lg-12 col-md-12">
+                <h1 class="page-title"><%= @article.title%></h1>
+                <span class="news-meta-date"><b>Publicado em:</b> <%= @article.updated_at.strftime("%d/%m/%Y")%> às <%= @article.updated_at.strftime("%H:%M")%> </span>
+                <p><span class="news-meta-date"><b>Autor:</b> <%= @article.user.name%></span></p>
+                <figure class="news-featured-image">
+                    <br>
+                   <%= image_tag @article.image.url, class: 'img-responsive' %>
+                </figure>
+                <div class="news-body">
+                    <p class="call-out">
+                        <p align="justify">
+                            <%= @article.description.html_safe %>
+                        </p>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

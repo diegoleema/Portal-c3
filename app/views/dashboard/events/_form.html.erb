@@ -1,0 +1,78 @@
+<script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+<script>
+  tinymce.init({
+    selector:'textarea',
+    statusbar: false,
+    menubar: false,
+    min_height: 400,
+    plugins: 'link image code',
+    toolbar: [
+      'undo redo | styleselect | bold italic | link image',
+      'alignleft aligncenter alignright'
+    ]
+  });
+
+</script>
+
+<div class="botao2">
+  <% if @event.id.nil? or @event.id == 0%>
+      <%= link_to 'Limpar', new_dashboard_event_path(), class: 'red', type: 'button' %>
+  <% else %>
+      <%= link_to button_tag('Remover', class: 'red'), {:controller => :events,
+                                                        :action => 'destroy', :id => @event.id }, :method => :delete %>
+  <% end %>
+  <a href="<%= dashboard_events_path() %>"><button class="green">Voltar</button></a>
+</div>
+<%= form_for([:dashboard, @event], :multipart => true) do |f| %>
+    <section class="content">
+      <section class="widget" style="min-height:300px">
+        <header>
+          <% if @event.errors.any? %>
+              <div id="error_explanation">
+                <h2><%= pluralize(@event.errors.count, "error") %> prohibited this dashboard_article from being saved:</h2>
+
+                <ul>
+                  <% @event.errors.full_messages.each do |message| %>
+                      <li><%= message %></li>
+                  <% end %>
+                </ul>
+              </div>
+          <% end %>
+          <span class="icon">&#59160;</span>
+          <hgroup>
+            <h1>Evento</h1>
+            <h2>Crie um novo evento</h2>
+          </hgroup>
+
+        </header>
+        <div class="content">
+          <div class="field-wrap">
+            <label>Título:</label>
+            <%= f.text_field :title %>
+          </div>
+
+          <div class="field-wrap">
+            <label>Imagem do evento:</label>
+            <%= f.file_field :image %>
+          </div>
+
+          <div class="field-wrap">
+            <label>Local:</label>
+            <%= f.text_field :place %>
+          </div>
+
+          <div class="field-wrap">
+            <label>Data:</label>
+            <%= f.datetime_select :date, :end_year => Date.current.year, :start_year => Date.current.year+2, :order => [:day, :month, :year] %>
+          </div>
+
+          <div class="field-wrap wysiwyg-wrap">
+            <%= f.text_area :description %>
+          </div>
+
+          <%= f.button 'Salvar', class: 'green', type: 'submit' %>
+        </div>
+      </section>
+    </section>
+    </form>
+<% end %>
