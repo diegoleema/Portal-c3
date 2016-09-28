@@ -1,8 +1,16 @@
-# Portal-c3
+# Aplicativo Portal-C3
 
 Repositorio da aplicação para o Portal C3 2016.2
 
-### Guia de commit:
+
+
+## Como rodar
+
+- Instalar ruby 2.2.3
+- Rodar `bundle install` no root do projeto (no linux usar `sudo bundle install`)
+- Ainda no root do projeto, se o passo anterior estiver ok, usar `rails s` para subir a aplicação na porta 3000
+
+## Guia de commit:
 
 O guia de commits afim de manter uma boa organização e caso algo saia errado um fácil rollback será:
 
