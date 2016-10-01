@@ -1,4 +1,4 @@
 ---
-pid: 28132
-control_url: unix:///tmp/puma-status-1475029066274-28132
-control_auth_token: 21cb5af7ab76fc143db58d5df929ec66
+pid: 11628
+control_url: unix://C:/Users/davin/AppData/Local/Temp/puma-status-1475330937261-11628
+control_auth_token: 934a72c0f5d4659cb540328a142a77e
