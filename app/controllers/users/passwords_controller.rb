@@ -2,6 +2,7 @@
 # Alterar caso seja necessario adicionar algum metodo ou dar override em algum
 class Users::PasswordsController < Devise::PasswordsController
   layout false
+  
   # GET /resource/password/new
   # def new
   #   super

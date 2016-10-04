@@ -1376,12 +1376,12 @@ table#myTable td.avatar img {
 /** LOGIN  **/
 
 body.login {
-	background-color: #ffffff;
+	background-color: #928e8e;
 }
 
 .login section {
 	width: 300px;
-	margin: 200px auto 0 auto;
+	margin: 300px auto 0 auto;
 	text-align: center;
 }
 
@@ -1454,6 +1454,30 @@ body.login {
 	-webkit-animation: animate-stripes 3s linear infinite;
 	-moz-animation: animate-stripes 3s linear infinite;
 }
+
+.field label, p {
+	color: #fff !important;
+}
+
+#error_explanation {
+	margin-bottom:20px !important;
+}
+
+#error_explanation h2, ul{
+	color:#fff !important;
+}
+/*
+.field_with_errors input {
+    border-color: #a94442 !important;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}
+
+.field_with_errors label {
+  	color: #a94442 !important;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}*/
 
 /** IPHONE STYLE CHECKBOX **/
 
@@ -1675,6 +1699,7 @@ div.wysiwyg iframe { clear: left; background-color:white; padding:10px; margin:0
 		overflow-x: hidden;
 	}
 	
+	
 	.testing {
 		position: fixed;
 		top: 0;
@@ -1844,7 +1869,7 @@ div.wysiwyg iframe { clear: left; background-color:white; padding:10px; margin:0
 	
 	.login section {
 		width: 85%;
-		margin: 0 auto 0 auto;
+		margin-top:150px;
 	}
 	
 	.login section h1 {
