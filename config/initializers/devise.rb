@@ -105,7 +105,7 @@ Devise.setup do |config|
   # config.pepper = 'bc02c4649e4422cf1864899e5f9167b6a159cfe0bd221dc3dcb8387443c65e68076f267a5f774a0cc969ff16f5f1229ebf7e08489cc81465d4424f123f354dad'
 
   # Send a notification email when the user's password is changed
-  # config.send_password_change_notification = false
+   config.send_password_change_notification = true
 
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without
@@ -214,7 +214,7 @@ Devise.setup do |config|
   # Turn scoped views on. Before rendering "sessions/new", it will first check for
   # "users/sessions/new". It's turned off by default because it's slower if you
   # are using only default views.
-  # config.scoped_views = false
+  config.scoped_views = false
 
   # Configure the default scope given to Warden. By default it's the first
   # devise role declared in your routes (usually :user).

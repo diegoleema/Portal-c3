@@ -2,8 +2,17 @@
 # Alterar caso seja necessario adicionar algum metodo ou dar override em algum
 class Users::SessionsController < Devise::SessionsController
    layout false
-# before_action :configure_sign_in_params, only: [:create]
+#before_action :configure_sign_in_params, only: [:create]
 
+   def new
+     self.resource = resource_class.new(sign_in_params)
+     store_location_for(resource, params[:redirect_to])
+     super
+   end
+
+# if params[:redirect_to].present?
+#   store_location_for(resource, params[:redirect_to])    
+# end
 # GET /resource/sign_in
 #def new
 #   super

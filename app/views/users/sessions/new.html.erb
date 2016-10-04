@@ -2,65 +2,75 @@
 <html lang="">
 <head>
 	<meta charset="utf-8">
-	<title>Administração Portal C3</title>
+	<title>Portal C3</title>
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
 	<meta name="robots" content="" />
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
-  <link rel="stylesheet" href="/assets/css/admin/style.css" media="all" />
-  <%= stylesheet_link_tag 'alert' %>
-	<!--[if IE]><link rel="stylesheet" href="css/ie.css" media="all" /><![endif]-->
+  	<link rel="stylesheet" href="/assets/css/admin/style.css" media="all" />
+ 	 <%= stylesheet_link_tag 'alert' %>
+    <!--[if IE]><link rel="stylesheet" href="css/ie.css" media="all" /><![endif]-->
     <!--[if IE 9]><link rel="stylesheet" href="css/ie9.css" media="all" /><![endif]-->
     <!--[if lt IE 9]><link rel="stylesheet" href="css/lt-ie-9.css" media="all" /><![endif]-->
 </head>
 <body class="login">
 	<section>
-		<h1><strong>Admnistração</strong> Portal C3</h1>
-    <%= devise_error_messages! %>
+		<h1 id="h1-header">Portal C3</h1>
+
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-      <%= f.text_field :enrollment, autofocus: true, placeholder:'Matrícula' %>
-			<%= f.password_field :password, autocomplete: "off", placeholder: 'Senha' %>
-			<%= f.submit "Entrar", class: 'blue' %>
+	<p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+     <div class="field">
+        <%= f.label :Matrícula %><br />
+      	<%= f.text_field :enrollment, autofocus: true %>
+     </div>
+     <div class="field">
+     	<%= f.label :Senha %><br />
+	<%= f.password_field :password, autocomplete: "off"%>
+     </div>
+     <div class="actions">
+	<%= f.submit "Entrar", class:"blue" %>
+     </div>
 		<% end -%>
     <p> <%= link_to "Perdeu a senha?", new_password_path('user') %> </p>
 	</section>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-<script type="text/javascript">
+// <script type="text/javascript">
 // Page load delay by Curtis Henson - http://curtishenson.com/articles/quick-tip-delay-page-loading-with-jquery/
-$(function(){
-	$('.login button').click(function(e){ 
-		// Get the url of the link 
-		var toLoad = $(this).attr('href');  
+// $(function(){
+// 	$('.login button').click(function(e){ 
+// 		// Get the url of the link 
+// 		var toLoad = $(this).attr('href');  
  
-		// Do some stuff 
-		$(this).addClass("loading"); 
+// 		// Do some stuff 
+// 		$(this).addClass("loading"); 
  
-			// Stop doing stuff  
-			// Wait 700ms before loading the url 
-			setTimeout(function(){window.location = toLoad}, 10000);	  
+// 			// Stop doing stuff  
+// 			// Wait 700ms before loading the url 
+// 			setTimeout(function(){window.location = toLoad}, 10000);	  
  
-		// Don't let the link do its natural thing 
-		e.preventDefault
-	});
+// 		// Don't let the link do its natural thing 
+// 		e.preventDefault
+// 	});
 	
-	$('input').each(function() {
+// 	$('input').each(function() {
 
-       var default_value = this.value;
+//        var default_value = this.value;
 
-       $(this).focus(function(){
-               if(this.value == default_value) {
-                       this.value = '';
-               }
-       });
+//        $(this).focus(function(){
+//                if(this.value == default_value) {
+//                        this.value = '';
+//                }
+//        });
 
-       $(this).blur(function(){
-               if(this.value == '') {
-                       this.value = default_value;
-               }
-       });
+//        $(this).blur(function(){
+//                if(this.value == '') {
+//                        this.value = default_value;
+//                }
+//        });
 
-});
-});
-</script>
+// });
+// });
+// </script>
 </body>
 </html>

@@ -17,7 +17,7 @@
 <section>
   <h1><strong>Administração</strong> Portal C3 </h1>
 
-  <h1>Esqueceu sua senha?</h1>
+  <h1 id="h1-header">Esqueceu sua senha?</h1>
 
   <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: {method: :post}) do |f| %>
       <%= devise_error_messages! %>
