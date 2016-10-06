@@ -1341,7 +1341,7 @@ table#myTable td {
 }
 
 table#myTable thead tr .header {
-	background-image: url('../images/bg.gif');
+	/*background-image: url('../images/bg.gif');*/
 	background-repeat: no-repeat;
 	background-position: center right;
 	cursor: pointer;
@@ -1381,12 +1381,18 @@ body.login {
 
 .login section {
 	width: 300px;
-	margin: 300px auto 0 auto;
-	text-align: center;
+	margin: 150px auto 0 auto;
+	
+}
+
+.login section p {
+	font-size:13px;
+	color: #616A72;
+	text-align: center !important;
 }
 
 .login section p a {
-	color: #fff;
+	text-align: left !important;
 }
 
 .login section p {
@@ -1455,9 +1461,13 @@ body.login {
 	-moz-animation: animate-stripes 3s linear infinite;
 }
 
-.field label, p {
-	color: #fff !important;
+
+
+.label-input {
+	font-size:13px;
+		text-align: left !important;
 }
+
 
 #error_explanation {
 	margin-bottom:20px !important;
@@ -1869,7 +1879,6 @@ div.wysiwyg iframe { clear: left; background-color:white; padding:10px; margin:0
 	
 	.login section {
 		width: 85%;
-		margin-top:150px;
 	}
 	
 	.login section h1 {

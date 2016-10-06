@@ -22,45 +22,26 @@
   <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: {method: :post}) do |f| %>
       <%= devise_error_messages! %>
       <%= f.hidden_field :reset_password_token %>
-      <%= f.label :password,placeholder: "Nova senha" %><br/>
-      <% if @minimum_password_length %>
-          <em>(<%= @minimum_password_length %> characters minimum)</em><br/>
-      <% end %>
-      <%= f.password_field :password, autofocus: true, autocomplete: "off" %>
-      <%= f.label :password_confirmation, placeholder: "Confirme nova senha" %><br/>
-      <%= f.password_field :password_confirmation, autocomplete: "off" %>
-      <%= f.submit "Mudar senha" , class: 'blue' %>
+      
+      <div class="field">
+        <%= f.label :password, "Nova Senha", placeholder: 'No mínimo 6 caracteres' %><br />
+        <%= f.password_field :password, autofocus: true, autocomplete: "on" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :password_confirmation, "Confirmação", placeholder: "Confirme nova senha" %><br/>
+        <%= f.password_field :password_confirmation, autocomplete: "on" %>
+      </div>
+      
+      <div class="actions">
+        <%= f.submit "Mudar senha" , class: 'blue' %>
+      </div>
+
   <% end %>
 </section>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
 <script type="text/javascript">
-  // Page load delay by Curtis Henson - http://curtishenson.com/articles/quick-tip-delay-page-loading-with-jquery/
-  $(function(){
-    $('.login button').click(function(e){
-      // Get the url of the link
-      var toLoad = $(this).attr('href');
-      // Do some stuff
-      $(this).addClass("loading");
-      // Stop doing stuff
-      // Wait 700ms before loading the url
-      setTimeout(function(){window.location = toLoad}, 10000);
-      // Don't let the link do its natural thing
-      e.preventDefault
-    });
-    $('input').each(function() {
-      var default_value = this.value;
-      $(this).focus(function(){
-        if(this.value == default_value) {
-          this.value = '';
-        }
-      });
-      $(this).blur(function(){
-        if(this.value == '') {
-          this.value = default_value;
-        }
-      });
-    });
-  });
+
 </script>
 </body>
 </html>

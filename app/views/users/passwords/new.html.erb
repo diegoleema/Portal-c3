@@ -23,10 +23,11 @@
     <%= devise_error_messages! %>
       <div class="field">
         <%= f.label :email %><br />
-      	<%= f.text_field :email, autofocus: true %>
+      	<%= f.text_field :email, autocomplete: "on", placeholder: 'Senha' %>
      </div>
      <div class="actions">
       <%= f.submit "Redefinir senha", class: 'blue'%>
+      <%= link_to "Voltar", new_session_path(resource_name), style: 'color:white' %><br/>
       </div>
   <% end %>
 </section>

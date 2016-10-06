@@ -10,6 +10,7 @@ class Users::SessionsController < Devise::SessionsController
      super
    end
 
+
 # if params[:redirect_to].present?
 #   store_location_for(resource, params[:redirect_to])    
 # end
