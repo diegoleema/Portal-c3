@@ -1,0 +1,9 @@
+<% flash.each do |name, msg| %>
+  <% if msg.class == Array %>
+    <% msg.each do |message| %>
+      <%= content_tag :p, message, :class => "#{name}" unless message.blank? %>
+    <% end %>
+  <% else %>
+    <%= content_tag :p, msg, :class => "#{name}" unless msg.blank? %>
+  <% end %>
+<% end %>
