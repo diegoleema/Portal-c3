@@ -644,9 +644,7 @@ section.widget header aside button.right-btn {
 
 section.widget .content {
 	padding: 25px;
-}d
-rouund:d:urd:nd::::: 
-rouroukgouuukgroud: ##f
+}
 
 section.widget header aside > span {
 	display: block;
@@ -1144,12 +1142,10 @@ ul.settings-dd li label {
 	
 	border-radius: 75px;
 	-webkit-border-radius: 75px;
-	-moz-border-radius: 75px
-	
+	-moz-border-radius: 75px;
 	box-shadow: 0 0 1px #ccc;
 	-webkit-box-shadow: 0 0 1px #ccc;
 	-moz-box-shadow: 0 0 2px #ccc;
-	
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -1376,8 +1372,20 @@ table#myTable td.avatar img {
 /** LOGIN  **/
 
 body.login {
-	background-color: #928e8e;
+    background: url("/assets/img/unicap-image.png") 100% fixed;
+    background-size: cover;
 }
+
+
+  @keyframes spinner {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(359deg);
+  }
+}
+
 
 .login section {
 	width: 300px;
@@ -1539,7 +1547,7 @@ body.login {
 
 .field-wrap.wysiwyg-wrap {
 	heiyht:180px;
-	posit-repeat ative;
+	position: repeat ative;
 }
 
 .field-wrap.wysiwyg-wrap .wysiwyg {
@@ -1687,7 +1695,7 @@ div.wysiwyg iframe { clear: left; background-color:white; padding:10px; margin:0
 .wysiwyg-dialog .wysiwyg-dialog-topbar .wysiwyg-dialog-close-wrapper a.wysiwyg-dialog-close-button:hover { background:#666; }
 .wysiwyg-dialog .wysiwyg-dialog-topbar .wysiwyg-dialog-title { font-size:20px; font-weight:bold; padding:5px; }
 .wysiwyg-dialog .wysiwyg-dialog-content { border:1px #ccc solid; border-top:0; padding:15px; background:white; }
-.wysiwyg-dialog-modal-div { position:absolute; top:0px; left:0px; width:100%; height:100%; background-color:rgb(255,255,255); background-color:rgba(0,0,0,0.5); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000); -ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";}
+/*.wysiwyg-dialog-modal-div { position:absolute; top:0px; left:0px; width:100%; height:100%; background-color:rgb(255,255,255); background-color:rgba(0,0,0,0.5); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000); -ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";}*/
 .wysiwyg-dialog-content form.wysiwyg fieldset { border:1px #ccc solid; }
 .wysiwyg-dialog-content form.wysiwyg legend { padding:7px; }
 .wysiwyg-dialog-content form.wysiwyg .form-row { clear:both; padding:4px 0; }
@@ -1871,10 +1879,6 @@ div.wysiwyg iframe { clear: left; background-color:white; padding:10px; margin:0
 	
 	.dropzone {
 		padding: 8px !important;
-	}
-	
-	body.login {
-		padding-top: 50px;
 	}
 	
 	.login section {

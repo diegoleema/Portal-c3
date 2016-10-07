@@ -6,32 +6,38 @@
   <meta name="description" content="" />
   <meta name="keywords" content="" />
   <meta name="robots" content="" />
-  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+  <link rel="stylesheet" href="/assets/css/@font-face/open-sans.css" media="all" />
   <link rel="stylesheet" href="/assets/css/admin/style.css" media="all" />
+  <link rel="stylesheet" href="/assets/css/auth/authentication-page.css" media="all">
+  <link rel="stylesheet" href="/assets/font-awesome/css/font-awesome.min.css" media="all">
   <%= stylesheet_link_tag 'alert' %>
+  <script src="/assets/js/admin/prefixfree.min.js"></script>
   <!--[if IE]><link rel="stylesheet" href="css/ie.css" media="all" /><![endif]-->
   <!--[if IE 9]><link rel="stylesheet" href="css/ie9.css" media="all" /><![endif]-->
   <!--[if lt IE 9]><link rel="stylesheet" href="css/lt-ie-9.css" media="all" /><![endif]-->
 </head>
-<body class="login">
-<section>
-  <h1>Portal C3 </h1>
 
-  <h1>Esqueceu sua senha?</h1>
-
-  <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: {method: :post}) do |f| %>
+<body>
+<section id="wrappter-container">
+  <%= form_for(resource, as: resource_name, url: password_path(resource_name), :html => { :class => "login", :id => "formAuth",  :data_message_submit => "Recuperando..."}) do |f| %>
+     <p class="title"><strong>Esqueceu sua senha?</strong></p>
     <%= devise_error_messages! %>
-      <div class="field">
-        <%= f.label :email %><br />
-      	<%= f.text_field :email, autocomplete: "on", placeholder: 'Senha' %>
+    <div class="field">
+        <%= f.label :email, :class => "label-input"%><br />
+      	<%= f.text_field :email,  autocomplete: "on", placeholder: 'Email'%>
+	     <i class="fa fa-user" style="font-size: 15px; padding-top:5px;"></i>
      </div>
-     <div class="actions">
-      <%= f.submit "Redefinir senha", class: 'blue'%>
-      <%= link_to "Voltar", new_session_path(resource_name), style: 'color:white' %><br/>
-      </div>
+
+    <%= link_to "Voltar",new_session_path(resource_name) %> 
+    <button>
+      <i class="spinner"></i>
+      <span class="state">Recuperar a senha</span>
+    </button>
+  </p>
   <% end %>
 </section>
 
-<script src="/assets/jQuery/jquery.min.js"></script>
+<script src="/assets/js/jQuery/jquery-2.2.4.min.js"></script>
+<script src="/assets/js/admin/auth.js"></script>
 </body>
 </html>
