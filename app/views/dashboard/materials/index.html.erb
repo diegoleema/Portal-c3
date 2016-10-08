@@ -1,0 +1,35 @@
+<section class="content">
+    <section class="widget">
+        <header>
+            <span class="icon">&#128213;</span>
+            <hgroup>
+                <h1>Materiais</h1>
+                <h2>Materiais de aula cadastrados</h2>
+            </hgroup>
+
+        </header>
+        <div class="row gutter">
+            <div class="col-lg-12">
+               <div class="portal_pagination">
+                <%= will_paginate @dashboard_materials, :previous_label => 'Anterior', :next_label => 'Próximo'%>
+              </div>
+            </div>            
+        </div>
+        <div class="content no-padding timeline">
+
+            <% @dashboard_materials.each do |material| %>
+
+
+                <div class="tl-post">
+                    <span class="icon">&#128213;</span>
+                    <p>
+                      <%= link_to "#{material.noon? ? 'Tarde' : 'Noite'} - #{material.name}",  edit_dashboard_material_path(material)%>
+                        <span><%= material.code %></span>
+                    </p>
+                </div>
+
+                <% end %>
+
+        </div>
+    </section>
+</section>

@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'materials/index'
+
+  get 'materials/new'
+
+  get 'materials/create'
+
+  get 'materials/destroy'
+
   # Mapeamento das rotas relacionadas ao devise
   devise_for :users, skip: :registrations, controllers: {
       passwords: 'users/passwords',
@@ -50,6 +58,7 @@ Rails.application.routes.draw do
     resources :oportunities, except: [:show]
     resources :users, except: [:show]
     resources :discipline_classes, except: [:show]
+    resources :materials, only: [:index, :new, :create, :destroy]
 
 
     get 'profile' => 'profile#index', as: 'profile'
