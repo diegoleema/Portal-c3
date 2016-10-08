@@ -3,14 +3,14 @@ pt-BR:
     confirmations:
       confirmed: "Sua conta foi confirmada com sucesso. Você está logado."
       send_instructions: "Dentro de minutos você receberá um e-mail com instruções para confirmar a sua conta."
-      send_paranoid_instructions: "Caso seu e-mail exista em nossa base, você receberá um e-mail em poucos minutos com instruções sobre como confirmar sua conta."
+      send_paranoid_instructions: "Caso seu e-mail exista em nossa base, você receberá um e-mail em poucos minutos com instruções de como confirmar sua conta."
     failure:
       already_authenticated: "Você já está logado."
       inactive: "A sua conta não foi ativada ainda."
-      invalid: "E-mail ou senha inválidos."
+      invalid: "Matrícula ou senha inválidas."
       invalid_token: "Token de autenticação inválido."
       locked: "Sua conta está bloqueada."
-      not_found_in_database: "Email ou senha inválida."
+      not_found_in_database: "Matrícula ou senha inválidas."
       timeout: "A sua sessão expirou, por favor faça login novamente para continuar."
       unauthenticated: "Você precisa registrar-se ou fazer login para continuar."
       unconfirmed: "Você deve confirmar sua conta antes de continuar."
@@ -26,9 +26,9 @@ pt-BR:
       success: "Autorizado com sucesso pela conta %{kind}."
     passwords:
       no_token: "Você não pode acessar esta página sem que seja a partir de um e-mail de reinicialização de senha. Se você chegou aqui através de um e-mail de reinicialização de senha, por favor verifique se você usou a URL completa que foi informada."
-      send_instructions: "Você receberá um e-mail com instruções sobre como reinicializar sua senha em poucos minutos."
+      send_instructions: "Você receberá um e-mail com instruções de como reinicializar sua senha em poucos minutos."
       send_paranoid_instructions: "Caso seu e-mail esteja cadastrado, você receberá um link para recuperação de senha no seu e-mail em poucos minutos."
-      updated: "Sua senha foi alterada com sucesso. Você está logado agora."
+      updated: ""
       updated_not_active: "Sua senha foi alterada com sucesso."
     registrations:
       destroyed: "Até mais! Sua conta foi cancelada com sucesso. Esperamos vê-lo novamente em breve."
@@ -42,8 +42,8 @@ pt-BR:
       signed_in: ""
       signed_out: ""
     unlocks:
-      send_instructions: "Você receberá um e-mail em poucos minutos com instruções sobre como desbloquear sua conta."
-      send_paranoid_instructions: "Caso sua e-mail exista em nossa base, você receberá um e-mail em poucos minutos com instruções sobre como desbloqueá-la."
+      send_instructions: "Em poucos minutos você receberá um e-mail com instruções de como desbloquear sua conta."
+      send_paranoid_instructions: "Caso sua conta exista em nossa base, você receberá um e-mail em poucos minutos com instruções de como desbloqueá-la."
       unlocked: "Sua conta foi desbloqueada com sucesso. Por favor, faça login para continuar."
   errors:
     messages:
@@ -53,5 +53,5 @@ pt-BR:
       not_found: "não encontrado"
       not_locked: "não estava bloqueado"
       not_saved:
-        one: "1 erro impediu que %{resource} fosse realizada:"
-        other: "%{count} erros impediram que %{resource} fosse realizada:"
+        one: ""
+        other: ""

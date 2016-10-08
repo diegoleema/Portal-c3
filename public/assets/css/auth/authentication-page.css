@@ -79,7 +79,7 @@ body {
   margin-top: -47px;
   opacity: 0;
   left: 0;
-  transition: all 0.1s ease-in;
+  /*transition: all 0.1s ease-in;*/
 }
 .login input:focus {
   outline: none;
@@ -125,7 +125,7 @@ body {
   border: 0px solid rgba(0, 0, 0, 0.1);
   border-radius: 0 0 2px 2px;
   transform: rotateZ(0deg);
-  transition: all 0.1s ease-out;
+  /*transition: all 0.1s ease-out;*/
   border-bottom-width: 7px;
 }
 .login button .spinner {

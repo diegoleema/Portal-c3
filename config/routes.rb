@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     resource :registration,
              only: [:new, :create, :edit, :update],
              path: 'users',
-             path_names: {new: 'sign_up'},
+             #path_names: {new: 'sign_up'},
              controller: 'users/registrations',
              as: :user_registration do
       get :cancel
@@ -43,7 +43,7 @@ Rails.application.routes.draw do
   get 'disciplines' => 'discipline#index', as: 'disciplines'
   
   namespace :dashboard do
-    root 'articles#index'
+    root 'articles#index', as: 'root'
     resources :articles, except: [:show]
     resources :events, except: [:show]
     resources :disciplines, except: [:show]

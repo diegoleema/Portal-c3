@@ -8,7 +8,9 @@ class Dashboard::ProfileController < Dashboard::AuthenticatedController
     respond_to do |format|
       if current_user.update(user_params)
         current_user.profile.update(profile_params)
-        format.html { redirect_to dashboard_profile_path, notice: 'Usuário atualizado com sucesso.' }
+        sign_in(current_user, :bypass => true)
+        flash['alert alert-success'] = 'Usuário atualizado com sucesso.'
+        format.html { redirect_to dashboard_root_path }
         format.json { render :index, status: :ok, location: current_user }
       else
         format.html { render :index }
@@ -18,7 +20,6 @@ class Dashboard::ProfileController < Dashboard::AuthenticatedController
   end
 
   private
-
   def user_params
     user = params.require(:user).permit!
     if user[:password].nil? or user[:password].empty?

@@ -19,7 +19,7 @@
 
 <body>
 <section id="wrappter-container">
-  <%= form_for(resource, as: resource_name, url: password_path(resource_name), :html => { :class => "login", :id => "formAuth",  :data_message_submit => "Recuperando..."}) do |f| %>
+  <%= form_for(resource, as: resource_name, url: password_path(resource_name), :html => { :class => "login", :id => "formAuth",  :data_message_submit => "Processando..."}) do |f| %>
      <p class="title"><strong>Esqueceu sua senha?</strong></p>
     <%= devise_error_messages! %>
     <div class="field">

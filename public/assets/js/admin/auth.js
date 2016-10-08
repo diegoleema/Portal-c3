@@ -7,5 +7,5 @@ $("#formAuth").on("submit",function(e) {
   $state.html($message);
   setTimeout(function() {
     $this.off("submit").trigger("submit");
-  }, 2000);
+  }, 1500);
 });

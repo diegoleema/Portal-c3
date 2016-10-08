@@ -1,18 +1,16 @@
 <%= form_for(dashboard_profile_update_path, html: { multipart: true }) do |f| %>
     <section class="content">
       <section class="widget" style="min-height:300px">
-        <header>
+          <%= render "shared/error_messages" %>
           <% if current_user.errors.any? %>
-              <div id="error_explanation">
-                <h2><%= pluralize(current_user.errors.count, "error") %> prohibited this dashboard_article from being saved:</h2>
-
-                <ul>
+              <div class="alert alert-danger">
                   <% current_user.errors.full_messages.each do |message| %>
-                      <li><%= message %></li>
+                      <li style="margin-left:5px;"><%= message %></li>
                   <% end %>
-                </ul>
               </div>
           <% end %>
+        <header>
+
           <span class="icon">&#59160;</span>
           <hgroup>
             <h1 style= "line-height: 38px;" >Perfil <%= current_user.admin? ? 'Administrador' : 'Professor' %></h1>

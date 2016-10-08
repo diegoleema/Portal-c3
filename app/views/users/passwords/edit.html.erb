@@ -19,22 +19,23 @@
 <body>
 <section id="wrappter-container">
  <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { :class => 'login', :id => "formAuth", method: :put,  :data_message_submit => "Alterando..."}) do |f| %>
+       <p class="title"><strong>Alteração de Senha</strong></p>
       <%= devise_error_messages! %>
       <%= f.hidden_field :reset_password_token %>
-       <p class="title"><strong>Alteração de Senha</strong></p>
 
       <div class="field">
-        <%= f.label :password, "Nova senha", placeholder: "No mínimo 6 caracteres" %><br />
+        <%= f.label :password, "Nova senha", placeholder: "No mínimo 6 caracteres", :class => "label-input" %><br />
         <%= f.password_field :password, autofocus: true, autocomplete: "on" %>
         <i class="fa fa-user" style="font-size: 15px; padding-top:5px;"></i>
       </div>
 
       <div class="field">
-        <%= f.label :password_confirmation, "Confirmação", placeholder: "Confirme nova senha" %><br/>
+        <%= f.label :password_confirmation, "Confirmação", placeholder: "Confirme nova senha", :class => "label-input" %><br/>
         <%= f.password_field :password_confirmation, autocomplete: "on" %>
         <i class="fa fa-user" style="font-size: 15px; padding-top:5px;"></i>
       </div>
       
+      <%= link_to "Voltar",new_session_path(resource_name) %> 
       <button>
       <i class="spinner"></i>
       <span class="state">Mudar senha</span>
@@ -43,5 +44,6 @@
 </section>
 
 <script src="/assets/js/jQuery/jquery-2.2.4.min.js"></script>
+<script src="/assets/js/admin/auth.js"></script>
 </body>
 </html>

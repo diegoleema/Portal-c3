@@ -25,19 +25,19 @@
 	<p class="notice"><%= notice %></p>
 	<p class="alert"><%= alert %></p>
 	  <div class="field">
-        <%= f.label :Matrícula, :class => "label-input"%><br />
+        <%= f.label :enrollment, :class => "label-input"%><br />
       	<%= f.text_field :enrollment, autofocus: true, placeholder: 'Matrícula'%>
 	   <i class="fa fa-user" style="font-size: 15px; padding-top:5px;"></i>
      </div>
 	 
  	<div class="field">
-     	<%= f.label :Senha, :class => "label-input" %><br />
+     	<%= f.label :password, :class => "label-input" %><br />
 		<%= f.password_field :password, autocomplete: "off", placeholder: 'Senha' %>
 	    <i class="fa fa-key"  style="font-size: 15px; padding-top:5px;" ></i>
      </div>
 
   <%= link_to "Perdeu a senha?", new_password_path('user') %> 
-    <button id="teste">
+    <button>
       <i class="spinner"></i>
       <span class="state">Entrar</span>
     </button>
