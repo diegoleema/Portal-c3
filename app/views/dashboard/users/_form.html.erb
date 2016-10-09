@@ -1,24 +1,23 @@
+<link rel="stylesheet" href="/assets/css/dashboard/dashboard-form.css" media="all">
+
 <%= form_for([:dashboard, @user], html: { multipart: true }) do |f| %>
     <section class="content">
       <section class="widget" style="min-height:300px">
-        <header>
-          <% if @user.errors.any? %>
-              <div id="error_explanation">
-                <h2><%= pluralize(@user.errors.count, "error") %> prohibited this dashboard_article from being saved:</h2>
-
-                <ul>
-                  <% @user.errors.full_messages.each do |message| %>
-                      <li><%= message %></li>
+          <%= render "shared/error_messages" %>
+          <% if current_user.errors.any? %>
+              <div class="alert alert-danger">
+                  <% current_user.errors.full_messages.each do |message| %>
+                      <li style="margin-left:5px;"><%= message %></li>
                   <% end %>
-                </ul>
               </div>
           <% end %>
+        <header>
           <span class="icon">&#59160;</span>
           <hgroup>
             <h1 style= "line-height: 38px;" >Usuário</h1>
           </hgroup>
-
         </header>
+        
         <div class="content">
 
           <div class="field-wrap">
@@ -36,7 +35,7 @@
 
           <div class="field-wrap">
             <label>Titulação:</label>
-            <%= select :user_profile, :degree, options_for_select(['Mestre', 'Doutor', 'Especialista', 'Graduado', 'Técnico'], selected: @user.profile.degree) %>
+            <%= select :user_profile, :degree, options_for_select(['Mestre', 'Doutor', 'Especialista', 'Graduado', 'Técnico'], selected: @user.profile.degree), {}, {class: 'form-control'} %>
           </div>
 
           <div class="field-wrap">
@@ -45,7 +44,7 @@
           </div>
 
           <div class="field-wrap">
-            <label>Curriculum Lattes:</label>
+            <label>Curriculum lattes:</label>
             <%= text_field :user_profile, :lattes, value: @user.profile.lattes %>
           </div>
 
@@ -61,17 +60,22 @@
 
           <div class="field-wrap wysiwyg-wrap">
             <label>Áreas de interesse:</label>
-            <%= text_area :user_profile, :interests, value: @user.profile.interests %>
+            <%= text_area :user_profile, :interests, value: @user.profile.interests, rows: "5" %>
           </div>
 
           <div class="field-wrap wysiwyg-wrap">
-            <label>É administrador:</label>
-            <%= select :user, :role, options_for_select(User.roles.keys.to_a, selected: @user.role.nil? ? :user : @user.role) %>
+            <label>Tipo de conta:</label>
+            <%= select :user, :role, options_for_select(User.roles.keys.map(&:upcase), selected: @user.role.nil? ? :user : @user.role), {}, { :class => "form-control" } %>
           </div>
 
           <div class="field-wrap wysiwyg-wrap">
-            <label>É professor (Caso sim, aparecerá no portal):</label>
-            <%= select :user_profile, :is_teacher, options_for_select([['Sim','1'], ['Não','0']], selected: @user.user_profile.is_teacher ? '1' : '0') %>
+            <label>Professor?</label>
+            <%= select :user_profile, :is_teacher, options_for_select([['Sim','1'], ['Não','0']], selected: @user.user_profile.is_teacher ? '1' : '0'), {}, { :class => "form-control" } %>
+          </div>
+
+           <div class="field-wrap wysiwyg-wrap">
+            <label>Matrícula</label>
+            <%= text_field :user, :enrollment, :class => "form-control" %>
           </div>
 
           <div class="field-wrap wysiwyg-wrap">
@@ -84,7 +88,10 @@
             <%= password_field :user, :password_confirmation, value: @user.password_confirmation %>
           </div>
 
-          <%= f.button 'Salvar', class: 'green', type: 'submit' %>
+          <div class="field-wrap wysiwyg-wrap">
+            <%= f.button 'Salvar', class: 'btn btn-warning', type: 'submit' %>
+          </div>
+
         </div>
       </section>
     </section>

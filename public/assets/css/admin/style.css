@@ -456,7 +456,7 @@ button.ico-font {
 	padding: 10px 15px;
 	color: #fff;
 	position: relative;
-	margin: 0 0 0 5px;
+	/*margin: 0 0 0 5px;*/
 	border-radius: 3px;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
@@ -558,10 +558,9 @@ section.widget {
 section.widget header {
 	background: #3B3E40;
 	padding: 15px 25px;
-	height: 35px;
+	height: 60px;
 	border-bottom: none;
 	overflow: visible;
-	
 	border-radius: 5px 5px 0 0;
 	-webkit-border-radius: 5px 5px 0 0;
 	-moz-border-radius: 5px 5px 0 0;
@@ -576,14 +575,13 @@ section.widget header span.icon {
 	background: -o-linear-gradient(top, #208ed3 0%,#0272bd 100%); 
 	background: -ms-linear-gradient(top, #208ed3 0%,#0272bd 100%); 
 	background: linear-gradient(to bottom, #208ed3 0%,#0272bd 100%);
-	padding: 12px 0;
+	padding: 17px 0;
 	font-size: 20px;
 	width:39px;
 	height: 15px;
 	float: left;
-	line-height: 16px;
+	line-height: 7px;
 	text-align: center;
-	
 	border-radius: 75px;
 	-webkit-border-radius: 75px;
 	-moz-border-radius: 75px;
@@ -2064,3 +2062,8 @@ div.botao2{
     margin-right: 1em; }
   .portal_pagination .next_page {
     margin-left: 1em; }
+
+
+.alert{
+	margin-bottom: 0px !important;
+}

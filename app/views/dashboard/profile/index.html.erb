@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="/assets/css/dashboard/dashboard-form.css" media="all">
+
 <%= form_for(dashboard_profile_update_path, html: { multipart: true }) do |f| %>
     <section class="content">
       <section class="widget" style="min-height:300px">
@@ -10,7 +12,6 @@
               </div>
           <% end %>
         <header>
-
           <span class="icon">&#59160;</span>
           <hgroup>
             <h1 style= "line-height: 38px;" >Perfil <%= current_user.admin? ? 'Administrador' : 'Professor' %></h1>
