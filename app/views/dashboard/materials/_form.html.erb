@@ -5,7 +5,7 @@
     <% end %>
     <a href="<%= dashboard_materials_path %>"><button class="green">Voltar</button></a>
 </div>
-<%= form_for([:dashboard, @dashboard_material]) do |f| %>
+<%= form_for([:dashboard, @dashboard_material], html: {multipart: true}) do |f| %>
     <section class="content">
         <section class="widget" style="min-height:00px">
             <header>

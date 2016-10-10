@@ -16,7 +16,6 @@ class Dashboard::MaterialsController < Dashboard::AuthenticatedController
     @dashboard_material = Material.new(dashboard_material_params)
 
     respond_to do |format|
-      byebug
       if @dashboard_material.save
         format.html { redirect_to dashboard_materials_path, notice: 'material was successfully created.' }
         format.json { render :show, status: :created, location: @dashboard_material }
