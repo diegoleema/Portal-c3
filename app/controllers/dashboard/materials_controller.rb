@@ -1,4 +1,5 @@
 class Dashboard::MaterialsController < Dashboard::AuthenticatedController
+  before_action :set_dashboard_material, only: [:show, :edit, :update, :destroy]
   # GET /dashboard/materials
   # GET /dashboard/materials.json
   def index
