@@ -12,9 +12,11 @@ class Dashboard::MaterialsController < Dashboard::AuthenticatedController
    # POST /dashboard/materials
   # POST /dashboard/materials.json
   def create
+
     @dashboard_material = Material.new(dashboard_material_params)
 
     respond_to do |format|
+      byebug
       if @dashboard_material.save
         format.html { redirect_to dashboard_materials_path, notice: 'material was successfully created.' }
         format.json { render :show, status: :created, location: @dashboard_material }
@@ -55,7 +57,13 @@ class Dashboard::MaterialsController < Dashboard::AuthenticatedController
   end
    
    private
-      def material_params
+      # Use callbacks to share common setup or constraints between actions.
+    def set_dashboard_material
+      @dashboard_material = Material.find(params[:id])
+    end
+
+    # Never trust parameters from the scary internet, only allow the white list through.
+    def dashboard_material_params
       params.require(:material).permit(:name, :attachment)
    end
 end

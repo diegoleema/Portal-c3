@@ -1,0 +1,45 @@
+<div class="botao2">
+    <% if not @dashboard_material.new_record? %>
+      <%= link_to 'Remover', {:controller => :materials  ,
+                              :action => 'destroy', :id => @dashboard_material.id }, :method => :delete %>
+    <% end %>
+    <a href="<%= dashboard_materials_path %>"><button class="green">Voltar</button></a>
+</div>
+<%= form_for([:dashboard, @dashboard_material]) do |f| %>
+    <section class="content">
+        <section class="widget" style="min-height:00px">
+            <header>
+                <% if @dashboard_material.errors.any? %>
+                    <div id="error_explanation">
+                        <h2><%= pluralize(@dashboard_material.errors.count, "error") %> prohibited this dashboard_material from being saved:</h2>
+
+                        <ul>
+                            <% @dashboard_material.errors.full_messages.each do |message| %>
+                                <li>
+                                    <%= message %>
+                                </li>
+                                <% end %>
+                        </ul>
+                    </div>
+                    <% end %>
+                        <span class="icon">&#59160;</span>
+                        <hgroup>
+                            <h1>Materiais</h1>
+                            <h2><%= @dashboard_material.new_record? ? 'Inserir um novo material' : 'Modificar material' %></h2>
+                        </hgroup>
+            </header>
+            <div class="content">
+                <div class="field-wrap">
+                    <%= f.label :attachment %>
+                    <%= f.file_field :attachment %>
+                </div>
+
+               
+
+                <div id="botoess">
+                  <%= f.button 'Salvar', class: 'green', type: 'submit' %>
+                </div>
+            </div>
+        </section>
+    </section>
+    <% end %>
