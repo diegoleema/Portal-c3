@@ -29,12 +29,19 @@
                         </hgroup>
             </header>
             <div class="content">
+
+                <div class="field-wrap">
+                    <%= f.text_field :name, placeholder: 'Nome' %>
+                </div>
                 <div class="field-wrap">
                     <%= f.label :attachment %>
                     <%= f.file_field :attachment %>
                 </div>
-
-               
+                <div class="field-wrap">
+                    <%= f.label :discipline_id %>
+                    <%= f.collection_select :discipline_id, Discipline.all, :id, :name %>
+                </div>
+                <br>               
 
                 <div id="botoess">
                   <%= f.button 'Salvar', class: 'green', type: 'submit' %>

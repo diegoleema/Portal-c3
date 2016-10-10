@@ -8,7 +8,10 @@ class Dashboard::MaterialsController < Dashboard::AuthenticatedController
       @dashboard_materials = current_user.materials.paginate(:page => params[:page], :per_page => 10)
     end
   end
-   
+
+  # GET /dashboard/disciplines/1/edit
+  def edit
+  end   
    # POST /dashboard/materials
   # POST /dashboard/materials.json
   def create
@@ -63,6 +66,6 @@ class Dashboard::MaterialsController < Dashboard::AuthenticatedController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def dashboard_material_params
-      params.require(:material).permit(:name, :attachment)
+      params.require(:material).permit(:name, :attachment, :discipline_id)
    end
 end

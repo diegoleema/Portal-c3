@@ -23,8 +23,8 @@
                 <div class="tl-post">
                     <span class="icon">&#128213;</span>
                     <p>
-                      <%= link_to "#{material.noon? ? 'Tarde' : 'Noite'} - #{material.name}",  edit_dashboard_material_path(material)%>
-                        <span><%= material.code %></span>
+                      <%= link_to "#{material.name}",  edit_dashboard_material_path(material)%>
+                        <span><%= material.attachment %></span>
                     </p>
                 </div>
 

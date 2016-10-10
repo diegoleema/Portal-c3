@@ -58,7 +58,7 @@ Rails.application.routes.draw do
     resources :oportunities, except: [:show]
     resources :users, except: [:show]
     resources :discipline_classes, except: [:show]
-    resources :materials, only: [:index, :new, :create, :destroy]
+    resources :materials, except: [:show]
 
 
     get 'profile' => 'profile#index', as: 'profile'
