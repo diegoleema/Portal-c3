@@ -65,7 +65,7 @@
 
           <div class="field-wrap wysiwyg-wrap">
             <label>Tipo de conta:</label>
-            <%= select :user, :role, options_for_select(User.roles.keys.map(&:upcase), selected: @user.role.nil? ? :user : @user.role), {}, { :class => "form-control" } %>
+            <%= select :user, :role, options_for_select(User.roles.keys.to_a, selected: @user.role.nil? ? :user : @user.role), {}, { :class => "form-control" } %>
           </div>
 
           <div class="field-wrap wysiwyg-wrap">

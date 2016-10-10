@@ -8,18 +8,8 @@
             </hgroup>
 
         </header>
-        <div class="row gutter">
-            <div class="col-lg-12">
-               <div class="portal_pagination">
-                <%= will_paginate @dashboard_disciplines, :previous_label => 'Anterior', :next_label => 'Próximo'%>
-              </div>
-            </div>            
-        </div>
         <div class="content no-padding timeline">
-
             <% @dashboard_disciplines.each do |discipline| %>
-
-
                 <div class="tl-post">
                     <span class="icon">&#128213;</span>
                     <p>
@@ -27,9 +17,14 @@
                         <span><%= discipline.code %></span>
                     </p>
                 </div>
-
                 <% end %>
-
+        </div>
+                <div class="gutter">
+            <div class="col-lg-12">
+               <div class="portal_pagination">
+                <%= will_paginate @dashboard_disciplines, :previous_label => 'Anterior', :next_label => 'Próximo'%>
+              </div>
+            </div>            
         </div>
     </section>
 </section>

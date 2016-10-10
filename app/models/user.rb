@@ -35,7 +35,6 @@ class User < ActiveRecord::Base
   # Valida o tipo de arquivo a imagem da notícia pode ser
   validates_attachment_content_type :avatar, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
 
-
   def self.reset_password(id, password)
     user = find id
     user.password = password
