@@ -16,12 +16,12 @@
 
 <div class="botao2">
   <% if @event.id.nil? or @event.id == 0%>
-      <%= link_to 'Limpar', new_dashboard_event_path(), class: 'red', type: 'button' %>
+      <%= link_to 'Limpar', new_dashboard_event_path(), class: 'btn btn-danger', type: 'button' %>
   <% else %>
-      <%= link_to button_tag('Remover', class: 'red'), {:controller => :events,
+      <%= link_to button_tag('Remover', :class => 'btn btn-danger'), {:controller => :events,
                                                         :action => 'destroy', :id => @event.id }, :method => :delete %>
   <% end %>
-  <a href="<%= dashboard_events_path() %>"><button class="green">Voltar</button></a>
+  <a href="<%= dashboard_events_path() %>"><button class="btn btn-primary">Voltar</button></a>
 </div>
 <%= form_for([:dashboard, @event], :multipart => true) do |f| %>
     <section class="content">

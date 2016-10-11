@@ -45,7 +45,7 @@
                             <% end %>
                             <td>
                               <%= link_to 'Remover', {:controller => :articles,
-      :action => 'destroy', :id => article.id }, :method => :delete %>  
+      :action => 'destroy', :class => "btn btn-danger", :id => article.id }, :method => :delete %>  
                             </td>
                         </tr>
                       <% end %>

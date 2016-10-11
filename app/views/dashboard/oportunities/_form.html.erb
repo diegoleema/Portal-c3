@@ -16,12 +16,12 @@
 
 <div class="botao2">
   <% if @oportunity.id.nil? or @oportunity.id == 0%>
-      <%= link_to 'Limpar', new_dashboard_oportunity_path(), class: 'red', type: 'button' %>
+      <%= link_to 'Limpar', new_dashboard_oportunity_path(), class: 'btn btn-danger', type: 'button' %>
   <% else %>
-      <%= link_to button_tag('Remover', class: 'red'), {:controller => :oportunities,
+      <%= link_to button_tag('Remover', :class => 'btn btn-danger'), {:controller => :oportunities,
                                                         :action => 'destroy', :id => @oportunity.id }, :method => :delete %>
   <% end %>
-  <a href="<%= dashboard_oportunities_path() %>"><button class="green">Voltar</button></a>
+  <a href="<%= dashboard_oportunities_path() %>"><button class="btn btn-primary">Voltar</button></a>
 </div>
 <%= form_for([:dashboard, @oportunity], :multipart => true) do |f| %>
     <section class="content">

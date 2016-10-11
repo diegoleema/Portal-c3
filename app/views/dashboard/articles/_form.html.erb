@@ -16,12 +16,12 @@
 
 <div class="botao2">
 	<% if @dashboard_article.id.nil? or @dashboard_article.id == 0%>
-	<%= link_to 'Limpar', new_dashboard_article_path(), class: 'red', type: 'button' %>
+	<%= link_to 'Limpar', new_dashboard_article_path(), class: 'btn btn-danger', type: 'button' %>
 	<% else %>
-	<%= link_to button_tag('Remover', class: 'red'), {:controller => :articles,
+	<%= link_to button_tag('Remover', :class => "btn btn-danger"), {:controller => :articles,
       :action => 'destroy', :id => @dashboard_article.id }, :method => :delete %>	
 	<% end %>
-	<a href="<%= dashboard_articles_path() %>"><button class="green">Voltar</button></a>
+	<a href="<%= dashboard_articles_path() %>"><button class="btn btn-primary">Voltar</button></a>
 </div>
 <%= form_for([:dashboard, @dashboard_article], :multipart => true) do |f| %>
 	<section class="content">

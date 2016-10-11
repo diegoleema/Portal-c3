@@ -118,7 +118,7 @@ p {
 
 a:link, a:active, a:visited {
 	text-decoration: none;
-	color: #5daced;
+	/*color: #5daced;*/
 }
 
 *:focus {
