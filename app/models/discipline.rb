@@ -4,7 +4,7 @@ class Discipline < ActiveRecord::Base
     
     # Identifica como uma relação many to many com a classe User
     has_and_belongs_to_many :users
-    
+    has_many :materials
     # Identifica que um usuário de disciplina é um professor para quesitos de facilidade
     # de leitura e entendimento
     alias :teachers :users
