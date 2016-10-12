@@ -51,3 +51,25 @@
 	from bin/rails:4:in `<main>'
 === puma startup: 2016-09-27 23:17:46 -0300 ===
 === puma startup: 2016-10-12 00:26:58 -0300 ===
+=== puma startup: 2016-10-12 02:00:23 -0300 ===
+/home/diego/Documentos/Portal-c3/app/views/layouts/_header.html.erb:57: warning: string literal in condition
+/home/diego/Documentos/Portal-c3/app/views/layouts/_header.html.erb:57: warning: string literal in condition
+/home/diego/Documentos/Portal-c3/app/views/layouts/_header.html.erb:57: warning: string literal in condition
+/var/lib/gems/2.3.0/gems/rack-1.6.4/lib/rack/server.rb:355:in `delete': No such file or directory @ unlink_internal - /home/diego/Documentos/Portal-c3/tmp/pids/server.pid (Errno::ENOENT)
+	from /var/lib/gems/2.3.0/gems/rack-1.6.4/lib/rack/server.rb:355:in `block in write_pid'
+	from /var/lib/gems/2.3.0/gems/puma-3.4.0/lib/puma/cluster.rb:120:in `fork'
+	from /var/lib/gems/2.3.0/gems/puma-3.4.0/lib/puma/cluster.rb:120:in `block in spawn_workers'
+	from /var/lib/gems/2.3.0/gems/puma-3.4.0/lib/puma/cluster.rb:116:in `times'
+	from /var/lib/gems/2.3.0/gems/puma-3.4.0/lib/puma/cluster.rb:116:in `spawn_workers'
+	from /var/lib/gems/2.3.0/gems/puma-3.4.0/lib/puma/cluster.rb:424:in `run'
+	from /var/lib/gems/2.3.0/gems/puma-3.4.0/lib/puma/launcher.rb:172:in `run'
+	from /var/lib/gems/2.3.0/gems/puma-3.4.0/lib/rack/handler/puma.rb:51:in `run'
+	from /var/lib/gems/2.3.0/gems/rack-1.6.4/lib/rack/server.rb:286:in `start'
+	from /var/lib/gems/2.3.0/gems/railties-4.2.6/lib/rails/commands/server.rb:80:in `start'
+	from /var/lib/gems/2.3.0/gems/railties-4.2.6/lib/rails/commands/commands_tasks.rb:80:in `block in server'
+	from /var/lib/gems/2.3.0/gems/railties-4.2.6/lib/rails/commands/commands_tasks.rb:75:in `tap'
+	from /var/lib/gems/2.3.0/gems/railties-4.2.6/lib/rails/commands/commands_tasks.rb:75:in `server'
+	from /var/lib/gems/2.3.0/gems/railties-4.2.6/lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+	from /var/lib/gems/2.3.0/gems/railties-4.2.6/lib/rails/commands.rb:17:in `<top (required)>'
+	from bin/rails:4:in `require'
+	from bin/rails:4:in `<main>'

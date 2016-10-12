@@ -54,23 +54,23 @@
 
                 <ul id="drop-down-left" class="k-dropdown-menu">
                     <li>
-                        <%= link_to 'Notícias', articles_path(), class: (controller_name=='articles'?'active':'') %>
+                        <%= link_to 'Notícias', articles_path(), class: (controller_name=='articles' ? 'active':'' || controller_name=='' ? 'active':'') %>
                     </li>
                     <li>
-                        <%= link_to 'Eventos', events_path(), class: (controller_name=='events'?'active':'') %>
+                        <%= link_to 'Eventos', events_path(), class: (controller_name=='events' ? 'active':'') %>
                     </li>
                     <li>
-                        <%= link_to 'Oportunidades', oportunities_path(), class: (controller_name=='oportunities'?'active':'') %>
+                        <%= link_to 'Oportunidades', oportunities_path(), class: (controller_name=='oportunities' ? 'active':'') %>
                     </li>
 
                     <li>
-                        <%= link_to 'Disciplinas', disciplines_path(), class: (controller_name=='discipline'?'active':'') %>
+                        <%= link_to 'Disciplinas', disciplines_path(), class: (controller_name=='discipline' ? 'active':'') %>
                     </li>
                     <li>
-                      <%= link_to 'Professores', teachers_path(), class: (controller_name=='teachers'?'active':'') %>
+                      <%= link_to 'Professores', teachers_path(), class: (controller_name=='teachers' ? 'active':'') %>
                     </li>
                     <li>
-                        <%= link_to 'Sobre', about_path(), class: (action_name=='about'?'active':'') %>
+                        <%= link_to 'Sobre', about_path(), class: (action_name=='about' ? 'active':'') %>
                     </li>
                 </ul>
 
