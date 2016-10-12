@@ -17,3 +17,752 @@ Exiting
 [28132] === puma shutdown: 2016-09-27 23:17:49 -0300 ===
 [28132] - Goodbye!
 Exiting
+=== puma startup: 2016-10-12 00:26:58 -0300 ===
+[8464] * Starting control server on unix:///tmp/puma-status-1476242818166-8464
+[8464] - Worker 0 (pid: 8475) booted, phase: 0
+[8464] - Worker 1 (pid: 8479) booted, phase: 0
+[8464] - Worker 2 (pid: 8483) booted, phase: 0
+[8464] - Worker 3 (pid: 8486) booted, phase: 0
+
+
+Started GET "/" for 127.0.0.1 at 2016-10-12 00:27:00 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  [1m[35mArticle Load (1.1ms)[0m  SELECT  "articles".* FROM "articles"  ORDER BY "articles"."id" DESC LIMIT 5
+  [1m[36mEvent Load (0.8ms)[0m  [1mSELECT  "events".* FROM "events"  ORDER BY "events"."id" DESC LIMIT 5[0m
+  Rendered welcome/index.html.erb within layouts/application (6.7ms)
+  Rendered layouts/_header.html.erb (8.7ms)
+  Rendered layouts/_sidebar.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (1.2ms)
+  Rendered layouts/_sub_footer.html.erb (1.1ms)
+Completed 200 OK in 1619ms (Views: 1559.1ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/assets/api/articles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 00:27:02 -0300
+
+
+Started GET "/assets/article.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 00:27:02 -0300
+
+
+Started GET "/assets/dashboard/articles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 00:27:02 -0300
+
+
+Started GET "/assets/dashboard/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 00:27:02 -0300
+
+
+Started GET "/assets/dashboard/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 00:27:02 -0300
+
+
+
+
+Started GET "/assets/articles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 00:27:02 -0300
+Started GET "/assets/dashboard/disciplines.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 00:27:02 -0300
+
+
+Started GET "/assets/discipline.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 00:27:02 -0300
+
+
+Started GET "/assets/event.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 00:27:02 -0300
+
+
+Started GET "/assets/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 00:27:02 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/assets/oportunity.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 00:27:02 -0300
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 00:27:02 -0300
+
+
+Started GET "/assets/alert.self-4e30772d96ea198b5e687c81f236e339650a30fc38fad29fcff06bcf61b1dd17.css?body=1" for 127.0.0.1 at 2016-10-12 00:27:02 -0300
+
+
+Started GET "/assets/scaffolds.self-bfcbecb8b392c92b0598daecd82d7d95d65f54faa164421069dfb0f0cccdd701.css?body=1" for 127.0.0.1 at 2016-10-12 00:27:02 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-10-12 00:27:02 -0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-10-12 00:27:02 -0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-10-12 00:27:02 -0300
+
+
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-10-12 00:27:02 -0300
+Started GET "/assets/api/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 00:27:02 -0300
+
+
+Started GET "/assets/dashboard/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 00:27:02 -0300
+
+
+
+
+Started GET "/assets/article.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 127.0.0.1 at 2016-10-12 00:27:02 -0300
+Started GET "/assets/dashboard/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 00:27:02 -0300
+
+
+Started GET "/assets/discipline.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 00:27:02 -0300
+
+
+Started GET "/assets/articles.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 127.0.0.1 at 2016-10-12 00:27:02 -0300
+
+
+Started GET "/assets/event.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 127.0.0.1 at 2016-10-12 00:27:02 -0300
+
+
+Started GET "/assets/oportunity.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 127.0.0.1 at 2016-10-12 00:27:02 -0300
+
+
+Started GET "/assets/dashboard/disciplines.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 00:27:02 -0300
+
+
+Started GET "/assets/welcome.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 127.0.0.1 at 2016-10-12 00:27:02 -0300
+
+
+Started GET "/assets/dashboard/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 00:27:02 -0300
+
+
+Started GET "/assets/events.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 127.0.0.1 at 2016-10-12 00:27:02 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-12 00:27:02 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2016-10-12 00:41:13 -0300
+Processing by WelcomeController#index as HTML
+  [1m[35mArticle Load (1.1ms)[0m  SELECT  "articles".* FROM "articles"  ORDER BY "articles"."id" DESC LIMIT 5
+  [1m[36mEvent Load (0.7ms)[0m  [1mSELECT  "events".* FROM "events"  ORDER BY "events"."id" DESC LIMIT 5[0m
+  Rendered welcome/index.html.erb within layouts/application (8.9ms)
+  Rendered layouts/_header.html.erb (6.9ms)
+  Rendered layouts/_sidebar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+  Rendered layouts/_sub_footer.html.erb (0.4ms)
+Completed 200 OK in 181ms (Views: 141.1ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/assets/alert.self-4e30772d96ea198b5e687c81f236e339650a30fc38fad29fcff06bcf61b1dd17.css?body=1" for 127.0.0.1 at 2016-10-12 00:41:14 -0300
+
+
+Started GET "/assets/article.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 00:41:14 -0300
+
+
+Started GET "/assets/api/articles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 00:41:14 -0300
+
+
+Started GET "/assets/articles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 00:41:14 -0300
+
+
+Started GET "/assets/dashboard/disciplines.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 00:41:14 -0300
+
+
+Started GET "/assets/dashboard/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 00:41:14 -0300
+
+
+Started GET "/assets/dashboard/articles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 00:41:14 -0300
+
+
+Started GET "/assets/dashboard/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 00:41:14 -0300
+
+
+Started GET "/assets/discipline.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 00:41:14 -0300
+
+
+Started GET "/assets/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 00:41:14 -0300
+
+
+Started GET "/assets/event.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 00:41:14 -0300
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 00:41:14 -0300
+
+
+Started GET "/assets/scaffolds.self-bfcbecb8b392c92b0598daecd82d7d95d65f54faa164421069dfb0f0cccdd701.css?body=1" for 127.0.0.1 at 2016-10-12 00:41:14 -0300
+
+
+Started GET "/assets/oportunity.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 00:41:14 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-10-12 00:41:14 -0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-10-12 00:41:14 -0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-10-12 00:41:14 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-10-12 00:41:14 -0300
+
+
+Started GET "/assets/api/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 00:41:14 -0300
+
+
+Started GET "/assets/article.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 127.0.0.1 at 2016-10-12 00:41:14 -0300
+
+
+Started GET "/assets/dashboard/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 00:41:14 -0300
+
+
+Started GET "/assets/dashboard/disciplines.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 00:41:14 -0300
+
+
+Started GET "/assets/dashboard/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 00:41:14 -0300
+
+
+Started GET "/assets/dashboard/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 00:41:14 -0300
+
+
+Started GET "/assets/articles.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 127.0.0.1 at 2016-10-12 00:41:14 -0300
+
+
+Started GET "/assets/event.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 127.0.0.1 at 2016-10-12 00:41:14 -0300
+
+
+Started GET "/assets/oportunity.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 127.0.0.1 at 2016-10-12 00:41:14 -0300
+
+
+Started GET "/assets/events.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 127.0.0.1 at 2016-10-12 00:41:14 -0300
+
+
+Started GET "/assets/welcome.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 127.0.0.1 at 2016-10-12 00:41:14 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-12 00:41:14 -0300
+
+
+Started GET "/assets/discipline.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 00:41:14 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2016-10-12 00:50:34 -0300
+Processing by WelcomeController#index as HTML
+  [1m[35mArticle Load (0.9ms)[0m  SELECT  "articles".* FROM "articles"  ORDER BY "articles"."id" DESC LIMIT 5
+  [1m[36mEvent Load (1.0ms)[0m  [1mSELECT  "events".* FROM "events"  ORDER BY "events"."id" DESC LIMIT 5[0m
+  Rendered welcome/index.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered layouts/_sub_footer.html.erb (0.1ms)
+Completed 200 OK in 64ms (Views: 58.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/api/articles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 00:50:34 -0300
+
+
+
+Started GET "/assets/dashboard/articles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 00:50:34 -0300
+
+Started GET "/assets/article.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 00:50:34 -0300
+
+
+Started GET "/assets/alert.self-4e30772d96ea198b5e687c81f236e339650a30fc38fad29fcff06bcf61b1dd17.css?body=1" for 127.0.0.1 at 2016-10-12 00:50:34 -0300
+
+
+Started GET "/assets/dashboard/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 00:50:34 -0300
+
+
+Started GET "/assets/dashboard/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 00:50:34 -0300
+
+
+Started GET "/assets/discipline.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 00:50:34 -0300
+
+
+Started GET "/assets/event.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 00:50:34 -0300
+
+
+Started GET "/assets/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 00:50:34 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (2.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+
+
+Started GET "/assets/scaffolds.self-bfcbecb8b392c92b0598daecd82d7d95d65f54faa164421069dfb0f0cccdd701.css?body=1" for 127.0.0.1 at 2016-10-12 00:50:34 -0300
+Started GET "/assets/oportunity.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 00:50:34 -0300
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 00:50:34 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-10-12 00:50:34 -0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-10-12 00:50:34 -0300
+
+
+Started GET "/assets/articles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 00:50:35 -0300
+
+
+Started GET "/assets/dashboard/disciplines.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 00:50:35 -0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-10-12 00:50:35 -0300
+
+
+Started GET "/assets/articles.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 127.0.0.1 at 2016-10-12 00:50:35 -0300
+
+
+Started GET "/assets/article.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 127.0.0.1 at 2016-10-12 00:50:35 -0300
+
+
+Started GET "/assets/dashboard/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 00:50:35 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-10-12 00:50:35 -0300
+
+
+Started GET "/assets/api/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 00:50:35 -0300
+
+
+Started GET "/assets/dashboard/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 00:50:35 -0300
+
+
+Started GET "/assets/dashboard/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 00:50:35 -0300
+
+
+Started GET "/assets/event.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 127.0.0.1 at 2016-10-12 00:50:35 -0300
+
+
+Started GET "/assets/events.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 127.0.0.1 at 2016-10-12 00:50:35 -0300
+
+
+Started GET "/assets/discipline.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 00:50:35 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-12 00:50:35 -0300
+
+
+Started GET "/assets/oportunity.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 127.0.0.1 at 2016-10-12 00:50:35 -0300
+
+
+Started GET "/assets/dashboard/disciplines.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 00:50:35 -0300
+
+
+Started GET "/assets/welcome.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 127.0.0.1 at 2016-10-12 00:50:35 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2016-10-12 00:52:20 -0300
+Processing by WelcomeController#index as HTML
+  [1m[35mArticle Load (0.9ms)[0m  SELECT  "articles".* FROM "articles"  ORDER BY "articles"."id" DESC LIMIT 5
+  [1m[36mEvent Load (0.9ms)[0m  [1mSELECT  "events".* FROM "events"  ORDER BY "events"."id" DESC LIMIT 5[0m
+  Rendered welcome/index.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_sidebar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+  Rendered layouts/_sub_footer.html.erb (0.2ms)
+Completed 200 OK in 78ms (Views: 71.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/alert.self-4e30772d96ea198b5e687c81f236e339650a30fc38fad29fcff06bcf61b1dd17.css?body=1" for 127.0.0.1 at 2016-10-12 00:52:20 -0300
+
+
+
+
+Started GET "/assets/article.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 00:52:20 -0300
+Started GET "/assets/api/articles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 00:52:20 -0300
+
+
+Started GET "/assets/dashboard/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 00:52:20 -0300
+
+
+Started GET "/assets/articles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 00:52:20 -0300
+
+
+Started GET "/assets/dashboard/articles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 00:52:20 -0300
+
+
+Started GET "/assets/dashboard/disciplines.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 00:52:20 -0300
+
+
+Started GET "/assets/discipline.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 00:52:20 -0300
+
+
+Started GET "/assets/event.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 00:52:20 -0300
+
+
+Started GET "/assets/dashboard/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 00:52:20 -0300
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 00:52:20 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-10-12 00:52:20 -0300
+
+
+Started GET "/assets/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 00:52:20 -0300
+
+
+Started GET "/assets/scaffolds.self-bfcbecb8b392c92b0598daecd82d7d95d65f54faa164421069dfb0f0cccdd701.css?body=1" for 127.0.0.1 at 2016-10-12 00:52:20 -0300
+
+
+Started GET "/assets/oportunity.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 00:52:20 -0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-10-12 00:52:20 -0300
+
+
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-10-12 00:52:20 -0300
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-10-12 00:52:20 -0300
+
+Started GET "/assets/articles.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 127.0.0.1 at 2016-10-12 00:52:20 -0300
+
+
+Started GET "/assets/api/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 00:52:20 -0300
+
+
+Started GET "/assets/article.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 127.0.0.1 at 2016-10-12 00:52:20 -0300
+
+
+Started GET "/assets/dashboard/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 00:52:20 -0300
+
+
+Started GET "/assets/dashboard/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 00:52:20 -0300
+
+
+Started GET "/assets/dashboard/disciplines.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 00:52:20 -0300
+
+
+Started GET "/assets/dashboard/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 00:52:20 -0300
+
+
+Started GET "/assets/discipline.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 00:52:20 -0300
+
+
+
+Started GET "/assets/event.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 127.0.0.1 at 2016-10-12 00:52:20 -0300
+
+Started GET "/assets/events.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 127.0.0.1 at 2016-10-12 00:52:20 -0300
+
+
+Started GET "/assets/oportunity.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 127.0.0.1 at 2016-10-12 00:52:20 -0300
+
+
+Started GET "/assets/welcome.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 127.0.0.1 at 2016-10-12 00:52:20 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-12 00:52:20 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2016-10-12 00:59:58 -0300
+Processing by WelcomeController#index as HTML
+  [1m[35mArticle Load (1.0ms)[0m  SELECT  "articles".* FROM "articles"  ORDER BY "articles"."id" DESC LIMIT 5
+  [1m[36mEvent Load (0.8ms)[0m  [1mSELECT  "events".* FROM "events"  ORDER BY "events"."id" DESC LIMIT 5[0m
+  Rendered welcome/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_sidebar.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+  Rendered layouts/_sub_footer.html.erb (0.1ms)
+Completed 200 OK in 111ms (Views: 104.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/scaffolds.self-03cbc4d905eb7d5b730cddd92649785de094c562ac8e571e052f6a61daf6556b.css?body=1" for 127.0.0.1 at 2016-10-12 00:59:58 -0300
+
+
+Started GET "/assets/article.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 00:59:58 -0300
+
+
+Started GET "/assets/alert.self-4e30772d96ea198b5e687c81f236e339650a30fc38fad29fcff06bcf61b1dd17.css?body=1" for 127.0.0.1 at 2016-10-12 00:59:58 -0300
+
+
+Started GET "/assets/api/articles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 00:59:58 -0300
+
+
+Started GET "/assets/articles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 00:59:58 -0300
+
+
+Started GET "/assets/dashboard/articles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 00:59:58 -0300
+
+
+Started GET "/assets/dashboard/disciplines.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 00:59:58 -0300
+
+
+
+Started GET "/assets/dashboard/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 00:59:58 -0300
+
+
+Started GET "/assets/discipline.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 00:59:58 -0300
+
+
+
+Started GET "/assets/dashboard/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 00:59:58 -0300
+Started GET "/assets/event.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 00:59:58 -0300
+
+
+
+Started GET "/assets/oportunity.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 00:59:58 -0300
+
+Started GET "/assets/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 00:59:58 -0300
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 00:59:58 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-10-12 00:59:58 -0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-10-12 00:59:58 -0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-10-12 00:59:58 -0300
+
+
+
+
+Started GET "/assets/api/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 00:59:58 -0300
+
+
+Started GET "/assets/articles.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 127.0.0.1 at 2016-10-12 00:59:58 -0300
+Started GET "/assets/dashboard/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 00:59:58 -0300
+
+
+Started GET "/assets/article.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 127.0.0.1 at 2016-10-12 00:59:58 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-10-12 00:59:58 -0300
+
+
+Started GET "/assets/dashboard/disciplines.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 00:59:58 -0300
+
+
+
+
+
+
+Started GET "/assets/discipline.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 00:59:58 -0300
+Started GET "/assets/dashboard/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 00:59:58 -0300
+Started GET "/assets/dashboard/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 00:59:58 -0300
+
+
+Started GET "/assets/event.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 127.0.0.1 at 2016-10-12 00:59:58 -0300
+
+
+Started GET "/assets/oportunity.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 127.0.0.1 at 2016-10-12 00:59:58 -0300
+
+
+Started GET "/assets/events.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 127.0.0.1 at 2016-10-12 00:59:58 -0300
+
+
+Started GET "/assets/welcome.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 127.0.0.1 at 2016-10-12 00:59:58 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-12 00:59:58 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2016-10-12 01:01:14 -0300
+Processing by WelcomeController#index as HTML
+  [1m[35mArticle Load (1.0ms)[0m  SELECT  "articles".* FROM "articles"  ORDER BY "articles"."id" DESC LIMIT 5
+  [1m[36mEvent Load (0.7ms)[0m  [1mSELECT  "events".* FROM "events"  ORDER BY "events"."id" DESC LIMIT 5[0m
+  Rendered welcome/index.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_sidebar.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered layouts/_sub_footer.html.erb (0.1ms)
+Completed 200 OK in 72ms (Views: 64.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/alert.self-4e30772d96ea198b5e687c81f236e339650a30fc38fad29fcff06bcf61b1dd17.css?body=1" for 127.0.0.1 at 2016-10-12 01:01:14 -0300
+
+
+
+
+Started GET "/assets/api/articles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 01:01:14 -0300
+Started GET "/assets/article.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 01:01:14 -0300
+
+
+Started GET "/assets/articles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 01:01:14 -0300
+
+
+Started GET "/assets/dashboard/articles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 01:01:14 -0300
+
+
+Started GET "/assets/dashboard/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 01:01:14 -0300
+
+
+Started GET "/assets/dashboard/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 01:01:14 -0300
+
+
+Started GET "/assets/event.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 01:01:14 -0300
+
+
+
+
+Started GET "/assets/dashboard/disciplines.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 01:01:14 -0300
+Started GET "/assets/discipline.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 01:01:14 -0300
+
+
+Started GET "/assets/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 01:01:14 -0300
+
+
+Started GET "/assets/oportunity.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 01:01:14 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-10-12 01:01:14 -0300
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 01:01:14 -0300
+
+
+Started GET "/assets/scaffolds.self-03cbc4d905eb7d5b730cddd92649785de094c562ac8e571e052f6a61daf6556b.css?body=1" for 127.0.0.1 at 2016-10-12 01:01:14 -0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-10-12 01:01:14 -0300
+
+
+
+
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-10-12 01:01:14 -0300
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-10-12 01:01:14 -0300
+Started GET "/assets/api/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 01:01:14 -0300
+
+
+Started GET "/assets/articles.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 127.0.0.1 at 2016-10-12 01:01:14 -0300
+
+
+Started GET "/assets/article.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 127.0.0.1 at 2016-10-12 01:01:14 -0300
+
+
+Started GET "/assets/dashboard/disciplines.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 01:01:14 -0300
+
+
+Started GET "/assets/dashboard/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 01:01:14 -0300
+
+
+Started GET "/assets/dashboard/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 01:01:14 -0300
+
+
+Started GET "/assets/dashboard/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 01:01:14 -0300
+
+
+Started GET "/assets/events.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 127.0.0.1 at 2016-10-12 01:01:14 -0300
+
+
+Started GET "/assets/oportunity.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 127.0.0.1 at 2016-10-12 01:01:14 -0300
+
+
+Started GET "/assets/discipline.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 01:01:14 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-12 01:01:14 -0300
+
+
+Started GET "/assets/welcome.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 127.0.0.1 at 2016-10-12 01:01:14 -0300
+
+
+Started GET "/assets/event.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 127.0.0.1 at 2016-10-12 01:01:14 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2016-10-12 01:01:57 -0300
+Processing by WelcomeController#index as HTML
+  [1m[35mArticle Load (1.2ms)[0m  SELECT  "articles".* FROM "articles"  ORDER BY "articles"."id" DESC LIMIT 5
+  [1m[36mEvent Load (0.7ms)[0m  [1mSELECT  "events".* FROM "events"  ORDER BY "events"."id" DESC LIMIT 5[0m
+  Rendered welcome/index.html.erb within layouts/application (7.2ms)
+  Rendered layouts/_header.html.erb (6.7ms)
+  Rendered layouts/_sidebar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+  Rendered layouts/_sub_footer.html.erb (0.5ms)
+Completed 200 OK in 166ms (Views: 123.3ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/assets/alert.self-4e30772d96ea198b5e687c81f236e339650a30fc38fad29fcff06bcf61b1dd17.css?body=1" for 127.0.0.1 at 2016-10-12 01:01:57 -0300
+
+
+
+
+Started GET "/assets/article.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 01:01:57 -0300
+Started GET "/assets/api/articles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 01:01:57 -0300
+
+
+Started GET "/assets/dashboard/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 01:01:57 -0300
+
+
+Started GET "/assets/articles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 01:01:57 -0300
+
+
+Started GET "/assets/dashboard/articles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 01:01:57 -0300
+
+
+Started GET "/assets/dashboard/disciplines.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 01:01:57 -0300
+
+
+Started GET "/assets/dashboard/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 01:01:57 -0300
+
+
+Started GET "/assets/discipline.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 01:01:57 -0300
+
+
+Started GET "/assets/event.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 01:01:57 -0300
+
+
+Started GET "/assets/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 01:01:57 -0300
+
+
+Started GET "/assets/oportunity.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 01:01:57 -0300
+
+
+Started GET "/assets/scaffolds.self-03cbc4d905eb7d5b730cddd92649785de094c562ac8e571e052f6a61daf6556b.css?body=1" for 127.0.0.1 at 2016-10-12 01:01:57 -0300
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-10-12 01:01:57 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-10-12 01:01:57 -0300
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-10-12 01:01:57 -0300
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-10-12 01:01:57 -0300
+
+
+Started GET "/assets/article.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 127.0.0.1 at 2016-10-12 01:01:57 -0300
+
+
+Started GET "/assets/api/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 01:01:57 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-10-12 01:01:57 -0300
+
+
+Started GET "/assets/articles.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 127.0.0.1 at 2016-10-12 01:01:57 -0300
+
+
+Started GET "/assets/dashboard/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 01:01:57 -0300
+
+
+Started GET "/assets/dashboard/articles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 01:01:57 -0300
+
+
+Started GET "/assets/dashboard/disciplines.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 01:01:57 -0300
+
+
+Started GET "/assets/dashboard/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 01:01:57 -0300
+
+
+Started GET "/assets/discipline.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-10-12 01:01:57 -0300
+
+
+Started GET "/assets/events.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 127.0.0.1 at 2016-10-12 01:01:57 -0300
+
+
+Started GET "/assets/oportunity.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 127.0.0.1 at 2016-10-12 01:01:57 -0300
+
+
+Started GET "/assets/event.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 127.0.0.1 at 2016-10-12 01:01:57 -0300
+
+
+Started GET "/assets/welcome.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 127.0.0.1 at 2016-10-12 01:01:57 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-10-12 01:01:57 -0300
+[8464] - Gracefully shutting down workers...
+[8464] === puma shutdown: 2016-10-12 01:02:12 -0300 ===
+[8464] - Goodbye!
+Exiting
