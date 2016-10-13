@@ -44,38 +44,6 @@
 
             </div>
             <!-- site logo end -->
-
-
-
-
-
-            <nav id="k-menu" class="k-main-navig">
-                <!-- main navig -->
-
-                <ul id="drop-down-left" class="k-dropdown-menu">
-                    <li>
-                        <%= link_to 'Notícias', articles_path(), class: (controller_name=='articles' ? 'active':'' || controller_name=='' ? 'active':'') %>
-                    </li>
-                    <li>
-                        <%= link_to 'Eventos', events_path(), class: (controller_name=='events' ? 'active':'') %>
-                    </li>
-                    <li>
-                        <%= link_to 'Oportunidades', oportunities_path(), class: (controller_name=='oportunities' ? 'active':'') %>
-                    </li>
-
-                    <li>
-                        <%= link_to 'Disciplinas', disciplines_path(), class: (controller_name=='discipline' ? 'active':'') %>
-                    </li>
-                    <li>
-                      <%= link_to 'Professores', teachers_path(), class: (controller_name=='teachers' ? 'active':'') %>
-                    </li>
-                    <li>
-                        <%= link_to 'Sobre', about_path(), class: (action_name=='about' ? 'active':'') %>
-                    </li>
-                </ul>
-
-            </nav>
-            <!-- main navig end -->
         </div>
     </div>
     <!-- row end -->

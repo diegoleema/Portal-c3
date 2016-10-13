@@ -4,14 +4,14 @@
             <li class="widget-container widget_course_search">
                 <li class="widget-container widget_text">
                     <a href="http://www.unicap.br/biblioteca/pages/" target="_blanck" class="" title="Biblioteca Central">                          
-                            <img src="/assets/img/biblioteca.jpg"/>
-                        </a>
+                        <img src="/assets/img/biblioteca.jpg"/>
+                    </a>
                     <a href="http://www.unicap.br/PortalProfessor/" target="_blanck" class="" title="Portal do Professor">
-                           
-                            <img src="/assets/img/portalProfessor.jpg"/> 
-                   
-                            
-                        </a>
+                     
+                        <img src="/assets/img/portalProfessor.jpg"/> 
+                        
+                        
+                    </a>
                     <a href="http://www.unicap.br/PortalGraduacao/" target="_blanck" class="" title="Portal do Aluno de Graduação">
                         
 
@@ -20,8 +20,19 @@
                         
 
                     </a>
+
+                    
+                    <li>
+                        <%= link_to 'Disciplinas', disciplines_path(), class: (controller_name=='discipline' ? 'active':'') %>
+                    </li>
+                    <li>
+                      <%= link_to 'Professores', teachers_path(), class: (controller_name=='teachers' ? 'active':'') %>
+                  </li>
+                  <li>
+                    <%= link_to 'Sobre', about_path(), class: (action_name=='about' ? 'active':'') %>
                 </li>
             </li>
-        </ul>
-    </div>
+        </li>
+    </ul>
+</div>
 </div>
