@@ -1,66 +1,52 @@
 <!DOCTYPE html>
 <html lang="">
 <head>
-	<meta charset="utf-8">
-	<title>Administração Portal C3</title>
-	<meta name="description" content="" />
-	<meta name="keywords" content="" />
-	<meta name="robots" content="" />
-	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+  <meta charset="utf-8">
+  <title>Administração Portal C3</title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="robots" content="" />
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+  <link rel="stylesheet" href="/assets/css/@font-face/open-sans.css" media="all" />
   <link rel="stylesheet" href="/assets/css/admin/style.css" media="all" />
+  <link rel="stylesheet" href="/assets/css/auth/authentication-page.css" media="all">
+  <link rel="stylesheet" href="/assets/font-awesome/css/font-awesome.min.css" media="all">
   <%= stylesheet_link_tag 'alert' %>
-	<!--[if IE]><link rel="stylesheet" href="css/ie.css" media="all" /><![endif]-->
-    <!--[if IE 9]><link rel="stylesheet" href="css/ie9.css" media="all" /><![endif]-->
-    <!--[if lt IE 9]><link rel="stylesheet" href="css/lt-ie-9.css" media="all" /><![endif]-->
+  <script src="/assets/js/admin/prefixfree.min.js"></script>
+  <!--[if IE]><link rel="stylesheet" href="css/ie.css" media="all" /><![endif]-->
+  <!--[if IE 9]><link rel="stylesheet" href="css/ie9.css" media="all" /><![endif]-->
+  <!--[if lt IE 9]><link rel="stylesheet" href="css/lt-ie-9.css" media="all" /><![endif]-->
 </head>
-<body class="login">
-	<section>
-		<h1><strong>Administração</strong> Portal C3</h1>
-    <%= devise_error_messages! %>
-    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-      <%= f.text_field :enrollment, autofocus: true, placeholder:'Matrícula' %>
-			<%= f.password_field :password, autocomplete: "off", placeholder: 'Senha' %>
-			<%= f.submit "Entrar", class: 'blue' %>
-		<% end -%>
-    <p> <%= link_to "Perdeu a senha?", new_password_path('user') %> </p>
-	</section>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-<script type="text/javascript">
-// Page load delay by Curtis Henson - http://curtishenson.com/articles/quick-tip-delay-page-loading-with-jquery/
-$(function(){
-	$('.login button').click(function(e){ 
-		// Get the url of the link 
-		var toLoad = $(this).attr('href');  
- 
-		// Do some stuff 
-		$(this).addClass("loading"); 
- 
-			// Stop doing stuff  
-			// Wait 700ms before loading the url 
-			setTimeout(function(){window.location = toLoad}, 10000);	  
- 
-		// Don't let the link do its natural thing 
-		e.preventDefault
-	});
-	
-	$('input').each(function() {
 
-       var default_value = this.value;
+<body>
+<section id="wrappter-container">
+ <%= form_for(resource, as: resource_name, url: session_path(resource_name), :html => { :class => "login", :id => "formAuth", :data_message_submit => "Autenticando..."}) do |f| %>
+  <p class="title"><strong>Portal C3</strong></p>
+	<p class="notice"><%= notice %></p>
+	<p class="alert"><%= alert %></p>
+	  <div class="field">
+        <%= f.label :enrollment, :class => "label-input"%><br />
+      	<%= f.text_field :enrollment, autofocus: true, placeholder: 'Matrícula'%>
+	   <i class="fa fa-user" style="font-size: 15px; padding-top:5px;"></i>
+     </div>
+	 
+ 	<div class="field">
+     	<%= f.label :password, :class => "label-input" %><br />
+		<%= f.password_field :password, autocomplete: "off", placeholder: 'Senha' %>
+	    <i class="fa fa-key"  style="font-size: 15px; padding-top:5px;" ></i>
+     </div>
 
-       $(this).focus(function(){
-               if(this.value == default_value) {
-                       this.value = '';
-               }
-       });
+  <%= link_to "Perdeu a senha?", new_password_path('user') %> 
+    <button>
+      <i class="spinner"></i>
+      <span class="state">Entrar</span>
+    </button>
+  </p>
+	<% end -%>
 
-       $(this).blur(function(){
-               if(this.value == '') {
-                       this.value = default_value;
-               }
-       });
+</section>
 
-});
-});
-</script>
+<script src="/assets/js/jQuery/jquery-2.2.4.min.js"></script>
+<script src="/assets/js/admin/auth.js"></script>
 </body>
 </html>

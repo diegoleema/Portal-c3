@@ -8,6 +8,7 @@
 	<meta name="keywords" content="" />
 	<meta name="robots" content="" />
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+  <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css" media="all">
   <link rel="stylesheet" href="/assets/css/admin/style.css" media="all" />
   <link rel="stylesheet" href="/assets/css/multi-select.css" media="all" />
   <%= csrf_meta_tags %>
@@ -21,12 +22,13 @@
 	<%= yield %>
 
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-<script src="/assets/js/admin/jquery.wysiwyg.js"></script>
+
+<script src="/assets/js/jQuery/jquery.min.js"></script>
+<script src="/assets/js/jQuery/jquery.wysiwyg.js"></script>
 <script src="/assets/js/admin/custom.js"></script>
 <script src="/assets/js/admin/cycle.js"></script>
-  <script src="/assets/js/admin/jquery.tablesorter.min.js"></script>
-  <script src="http://jquery-joshbush.googlecode.com/files/jquery.maskedinput-1.2.2.js"></script>
+<script src="/assets/js/jQuery/jquery.tablesorter.min.js"></script>
+<script src="/assets/js/jQuery/jquery.maskedinput.js"</script>
 
 <script type="text/javascript">
     $('.cycle').cycle({
@@ -36,7 +38,6 @@
         prev: '.left-btn',
         next: '.right-btn'
     });
-
     $('.datetime-local').mask('99/99/9999 99:99');
 </script>
 </body>

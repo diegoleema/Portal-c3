@@ -9,7 +9,7 @@
 
     </header>
     <div class="content">
-      <div class="row gutter">
+      <div class="gutter">
         <div class="col-lg-12">
           <div class="portal_pagination">
             <%= will_paginate @events, :previous_label => 'Anterior', :next_label => 'Próximo'%>
@@ -43,7 +43,7 @@
               <% end %>
               <td>
                 <%= link_to 'Remover', {:controller => :events,
-                                        :action => 'destroy', :id => article.id }, :method => :delete %>
+                                        :action => 'destroy',:id => article.id }, :method => :delete %>
               </td>
             </tr>
         <% end %>

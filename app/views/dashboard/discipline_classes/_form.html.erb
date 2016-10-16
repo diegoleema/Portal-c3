@@ -1,9 +1,9 @@
 <div class="botao2">
   <% if not @class.new_record? %>
       <%= link_to 'Remover', {:controller => :discipline_classes  ,
-                              :action => 'destroy', :id => @class.id }, :method => :delete %>
+                              :action => 'destroy', :id => @class.id },:class => "btn btn-danger", :method => :delete %>
   <% end %>
-  <a href="<%= dashboard_discipline_classes_path %>"><button class="green">Voltar</button></a>
+  <a href="<%= dashboard_discipline_classes_path %>"><button class="btn btn-primary">Voltar</button></a>
 </div>
 <%= form_for([:dashboard, @class], :multipart => true) do |f| %>
     <section class="content">

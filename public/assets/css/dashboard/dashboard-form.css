@@ -1,0 +1,17 @@
+  .field-wrap{
+    max-width: 350px;
+  }
+
+  .field-wrap > select{
+    max-width: 150px;
+    margin-bottom:15px;
+  }
+
+  textarea{
+    resize: none;
+  }
+
+  section.widget > div.content{
+    margin: auto;
+    width: 50%;
+  }

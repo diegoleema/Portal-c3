@@ -27,6 +27,7 @@
             <link href="/assets/style.css" rel="stylesheet" type="text/css">
 
             <link href="/assets/dist/css/lightbox.css" rel="stylesheet">
+            
 
 </head>
 
@@ -41,6 +42,7 @@
     <div id="k-body">
 
         <div class="container">
+<<<<<<< HEAD
             <nav id="k-menu" class="k-main-navig">
                 <!-- main navig -->
                 <ul id="drop-down-left" class="k-dropdown-menu">
@@ -58,6 +60,15 @@
             <!-- main navig end -->
               <p class="notice"><%= notice %></p>
               <p class="alert"><%= alert %></p>
+=======
+            <div class="row no-gutter">
+              <% if notice %>
+                <p class="alert alert-success"><%= notice %></p>
+              <% end %>
+              <% if alert %>
+                <p class="alert alert-danger"><% alert %></p>
+              <% end %>     
+>>>>>>> 42a18de6923f28a8df6ad04a55e239c73928a5cf
               <%= yield %>              
               <%= render :partial => 'layouts/sidebar.html.erb' %>
             <!-- </div> -->

@@ -32,7 +32,7 @@
                     </td>
                     <td>
                         <%= link_to 'Remover', {:controller => :users,
-                        :action => 'destroy', :id => user.id }, :method => :delete %>
+                        :action => 'destroy', :class => "btn btn-danger", :id => user.id }, :method => :delete %>
                     </td>
                 </tr>
                 <% end %>

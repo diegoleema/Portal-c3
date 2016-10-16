@@ -1,0 +1,52 @@
+<div class="botao2">
+    <% if not @dashboard_material.new_record? %>
+      <%= link_to 'Remover', {:controller => :materials  ,
+                              :action => 'destroy', :id => @dashboard_material.id },:class => "btn btn-danger", :method => :delete %>
+    <% end %>
+    <a href="<%= dashboard_materials_path %>"><button class="btn btn-primary">Voltar</button></a>
+</div>
+<%= form_for([:dashboard, @dashboard_material], html: {multipart: true}) do |f| %>
+    <section class="content">
+        <section class="widget" style="min-height:00px">
+            <header>
+                <% if @dashboard_material.errors.any? %>
+                    <div id="error_explanation">
+                        <h2><%= pluralize(@dashboard_material.errors.count, "error") %> prohibited this dashboard_material from being saved:</h2>
+
+                        <ul>
+                            <% @dashboard_material.errors.full_messages.each do |message| %>
+                                <li>
+                                    <%= message %>
+                                </li>
+                                <% end %>
+                        </ul>
+                    </div>
+                    <% end %>
+                        <span class="icon">&#59160;</span>
+                        <hgroup>
+                            <h1>Materiais</h1>
+                            <h2><%= @dashboard_material.new_record? ? 'Inserir um novo material' : 'Modificar material' %></h2>
+                        </hgroup>
+            </header>
+            <div class="content">
+
+                <div class="field-wrap">
+                    <%= f.text_field :name, placeholder: 'Nome' %>
+                </div>
+                <div class="field-wrap">
+                    <%= f.label :attachment %>
+                    <%= f.file_field :attachment %>
+                </div>
+                <div class="field-wrap">
+                    <%= f.label :discipline_id %>
+                    <%= f.collection_select :discipline_id, Discipline.all, :id, :name %>
+                </div>
+                <br>               
+
+                <div id="botoess">
+                  <%= f.button 'Salvar', class: 'green', type: 'submit' %>
+                </div>
+            </div>
+        </section>
+    </section>
+    <% end %>

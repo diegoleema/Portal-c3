@@ -108,7 +108,7 @@ body {
 	font-size: 12px;
 	background: #f7f7f7;
 	
-	color: #3B3E40;
+	/*color: #3B3E40;*/
 }
 
 p {
@@ -118,7 +118,7 @@ p {
 
 a:link, a:active, a:visited {
 	text-decoration: none;
-	color: #5daced;
+	/*color: #5daced;*/
 }
 
 *:focus {
@@ -456,7 +456,7 @@ button.ico-font {
 	padding: 10px 15px;
 	color: #fff;
 	position: relative;
-	margin: 0 0 0 5px;
+	/*margin: 0 0 0 5px;*/
 	border-radius: 3px;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
@@ -486,6 +486,8 @@ button.ico-font {
 
 .blue {
 	border: 1px solid #0f70ad;
+	cursor: pointer;
+	color: white;
 	text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
 	background: #208ed3; /* Old browsers */
 	background: -moz-linear-gradient(top, #208ed3 0%, #0272bd 100%); /* FF3.6+ */ 
@@ -556,10 +558,9 @@ section.widget {
 section.widget header {
 	background: #3B3E40;
 	padding: 15px 25px;
-	height: 35px;
+	height: 60px;
 	border-bottom: none;
 	overflow: visible;
-	
 	border-radius: 5px 5px 0 0;
 	-webkit-border-radius: 5px 5px 0 0;
 	-moz-border-radius: 5px 5px 0 0;
@@ -574,14 +575,13 @@ section.widget header span.icon {
 	background: -o-linear-gradient(top, #208ed3 0%,#0272bd 100%); 
 	background: -ms-linear-gradient(top, #208ed3 0%,#0272bd 100%); 
 	background: linear-gradient(to bottom, #208ed3 0%,#0272bd 100%);
-	padding: 12px 0;
+	padding: 17px 0;
 	font-size: 20px;
 	width:39px;
 	height: 15px;
 	float: left;
-	line-height: 16px;
+	line-height: 7px;
 	text-align: center;
-	
 	border-radius: 75px;
 	-webkit-border-radius: 75px;
 	-moz-border-radius: 75px;
@@ -642,9 +642,7 @@ section.widget header aside button.right-btn {
 
 section.widget .content {
 	padding: 25px;
-}d
-rouund:d:urd:nd::::: 
-rouroukgouuukgroud: ##f
+}
 
 section.widget header aside > span {
 	display: block;
@@ -1142,12 +1140,10 @@ ul.settings-dd li label {
 	
 	border-radius: 75px;
 	-webkit-border-radius: 75px;
-	-moz-border-radius: 75px
-	
+	-moz-border-radius: 75px;
 	box-shadow: 0 0 1px #ccc;
 	-webkit-box-shadow: 0 0 1px #ccc;
 	-moz-box-shadow: 0 0 2px #ccc;
-	
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -1339,7 +1335,7 @@ table#myTable td {
 }
 
 table#myTable thead tr .header {
-	background-image: url('../images/bg.gif');
+	/*background-image: url('../images/bg.gif');*/
 	background-repeat: no-repeat;
 	background-position: center right;
 	cursor: pointer;
@@ -1373,18 +1369,21 @@ table#myTable td.avatar img {
 
 /** LOGIN  **/
 
-body.login {
-	background: #3B3E40;
-}
 
 .login section {
 	width: 300px;
-	margin: 200px auto 0 auto;
-	text-align: center;
+	margin: 150px auto 0 auto;
+	
+}
+
+.login section p {
+	font-size:13px;
+	color: #616A72;
+	text-align: center !important;
 }
 
 .login section p a {
-	color: #ccc;
+	text-align: left !important;
 }
 
 .login section p {
@@ -1393,9 +1392,9 @@ body.login {
 
 .login section h1 {
 	color: #fff;
-	font-family: 'Open Sans', sans-serif;
+	font-family: inherit;
 	font-size: 36px;
-	margin-bottom: 15px;
+	margin-bottom: 25px;
 	letter-spacing: -1px;
 	text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
 }
@@ -1453,6 +1452,34 @@ body.login {
 	-moz-animation: animate-stripes 3s linear infinite;
 }
 
+
+
+.label-input {
+	font-size:13px;
+		text-align: left !important;
+}
+
+
+#error_explanation {
+	margin-bottom:20px !important;
+}
+
+#error_explanation h2, ul{
+	color:#fff !important;
+}
+/*
+.field_with_errors input {
+    border-color: #a94442 !important;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}
+
+.field_with_errors label {
+  	color: #a94442 !important;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}*/
+
 /** IPHONE STYLE CHECKBOX **/
 
 .jquery-checkbox {
@@ -1503,7 +1530,7 @@ body.login {
 
 .field-wrap.wysiwyg-wrap {
 	heiyht:180px;
-	posit-repeat ative;
+	position: repeat ative;
 }
 
 .field-wrap.wysiwyg-wrap .wysiwyg {
@@ -1651,7 +1678,7 @@ div.wysiwyg iframe { clear: left; background-color:white; padding:10px; margin:0
 .wysiwyg-dialog .wysiwyg-dialog-topbar .wysiwyg-dialog-close-wrapper a.wysiwyg-dialog-close-button:hover { background:#666; }
 .wysiwyg-dialog .wysiwyg-dialog-topbar .wysiwyg-dialog-title { font-size:20px; font-weight:bold; padding:5px; }
 .wysiwyg-dialog .wysiwyg-dialog-content { border:1px #ccc solid; border-top:0; padding:15px; background:white; }
-.wysiwyg-dialog-modal-div { position:absolute; top:0px; left:0px; width:100%; height:100%; background-color:rgb(255,255,255); background-color:rgba(0,0,0,0.5); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000); -ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";}
+/*.wysiwyg-dialog-modal-div { position:absolute; top:0px; left:0px; width:100%; height:100%; background-color:rgb(255,255,255); background-color:rgba(0,0,0,0.5); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000); -ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";}*/
 .wysiwyg-dialog-content form.wysiwyg fieldset { border:1px #ccc solid; }
 .wysiwyg-dialog-content form.wysiwyg legend { padding:7px; }
 .wysiwyg-dialog-content form.wysiwyg .form-row { clear:both; padding:4px 0; }
@@ -1672,6 +1699,7 @@ div.wysiwyg iframe { clear: left; background-color:white; padding:10px; margin:0
 		overflow-y: auto;
 		overflow-x: hidden;
 	}
+	
 	
 	.testing {
 		position: fixed;
@@ -1836,13 +1864,8 @@ div.wysiwyg iframe { clear: left; background-color:white; padding:10px; margin:0
 		padding: 8px !important;
 	}
 	
-	body.login {
-		padding-top: 50px;
-	}
-	
 	.login section {
 		width: 85%;
-		margin: 0 auto 0 auto;
 	}
 	
 	.login section h1 {
@@ -2039,3 +2062,8 @@ div.botao2{
     margin-right: 1em; }
   .portal_pagination .next_page {
     margin-left: 1em; }
+
+
+.alert{
+	margin-bottom: 0px !important;
+}

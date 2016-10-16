@@ -1,15 +1,17 @@
+<script src="/assets/js/jQuery/jquery-2.2.4.min.js"></script>
 <section class="content">
-    <section class="widget">
+    <section class="widget">        	
+         <%= render "shared/error_messages" %>
         <header>
             <span class="icon">&#59160;</span>
             <hgroup>
-                <h1>Notícia</h1>
-                <h2>Notícia recentes</h2>
+                <h1>Notícias</h1>
+                <h2>Notícias recentes</h2>
             </hgroup>
 
         </header>
         <div class="content">
-            <div class="row gutter">
+            <div class="gutter">
               <div class="col-lg-12">
                 <div class="portal_pagination">
                   <%= will_paginate @dashboard_articles, :previous_label => 'Anterior', :next_label => 'Próximo'%>
@@ -43,7 +45,7 @@
                             <% end %>
                             <td>
                               <%= link_to 'Remover', {:controller => :articles,
-      :action => 'destroy', :id => article.id }, :method => :delete %>  
+      :action => 'destroy', :class => "btn btn-danger", :id => article.id }, :method => :delete %>  
                             </td>
                         </tr>
                       <% end %>
